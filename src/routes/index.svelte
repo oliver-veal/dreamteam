@@ -88,40 +88,60 @@
 
 <Parallax sections={1} threshold={{ top: 0 }} style="background-color: black;">
   <ParallaxLayer
-    rate={0.05}
-    style="display: flex; align-items: center; justify-content: center;"
-  >
-    <div class="bg-white rounded-full w-10 h-10" />
-  </ParallaxLayer>
-  <ParallaxLayer
     rate={0.15}
     style="display: flex; align-items: center; justify-content: center;"
   >
-    <div class="bg-white rounded-full w-10 h-10" />
+    <div
+      class="bg-white rounded-full w-14 h-14 absolute left-[75%] top-[37%]"
+    />
   </ParallaxLayer>
   <ParallaxLayer
-    rate={0.1}
+    rate={0.175}
     style="display: flex; align-items: center; justify-content: center;"
   >
-    <div class="bg-white rounded-full w-10 h-10" />
+    <div
+      class="bg-white rounded-full w-16 h-16 absolute left-[65%] top-[28%]"
+    />
   </ParallaxLayer>
   <ParallaxLayer
-    rate={-0.1}
+    rate={0.2}
     style="display: flex; align-items: center; justify-content: center;"
   >
-    <div class="bg-white rounded-full w-10 h-10" />
+    <div class="flex w-full h-full items-center justify-center">
+      <h1 class="text-5xl uppercase font-light text-center flex flex-col px-32">
+        We are dream team
+      </h1>
+    </div>
   </ParallaxLayer>
   <ParallaxLayer
-    rate={-0.15}
+    rate={0.225}
     style="display: flex; align-items: center; justify-content: center;"
   >
-    <div class="bg-white rounded-full w-10 h-10" />
+    <div
+      class="bg-white rounded-full w-20 h-20 absolute left-[30%] top-[67%]"
+    />
+  </ParallaxLayer>
+  <ParallaxLayer
+    rate={0.25}
+    style="display: flex; align-items: center; justify-content: center;"
+  >
+    <div
+      class="bg-white rounded-full w-24 h-24 absolute left-[60%] top-[75%]"
+    />
+  </ParallaxLayer>
+  <ParallaxLayer
+    rate={0.275}
+    style="display: flex; align-items: center; justify-content: center;"
+  >
+    <div
+      class="bg-white rounded-full w-32 h-32 absolute left-[20%] top-[35%]"
+    />
   </ParallaxLayer>
 </Parallax>
 
 <Parallax sections={1} threshold={{ top: 0 }} style="background-color: black;">
   <ParallaxLayer
-    rate={0.05}
+    rate={0.15}
     style="display: flex; align-items: center; justify-content: center;"
   >
     <div class="flex w-full h-full">
@@ -135,7 +155,7 @@
     </div>
   </ParallaxLayer>
   <ParallaxLayer
-    rate={0.15}
+    rate={0.35}
     style="display: flex; flex-direction: column; align-items: center; justify-content: center;"
   >
     <div class="flex w-full h-full justify-end">
@@ -148,22 +168,22 @@
       "
         >
           <button
-            class="flex items-center justify-center absolute left-[13px] top-[3px] inset-0 w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
+            class="flex items-center justify-center absolute left-[13px] top-[3px] w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
           >
             <Icon src={Plus} width="24" />
           </button>
           <button
-            class="flex items-center justify-center absolute left-[128px] top-[94px] inset-0 w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
+            class="flex items-center justify-center absolute left-[128px] top-[94px] w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
           >
             <Icon src={Plus} width="24" />
           </button>
           <button
-            class="flex items-center justify-center absolute left-[2px] top-[245px] inset-0 w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
+            class="flex items-center justify-center absolute left-[2px] top-[245px] w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
           >
             <Icon src={Plus} width="24" />
           </button>
           <button
-            class="flex items-center justify-center absolute left-[84px] top-[341px] inset-0 w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
+            class="flex items-center justify-center absolute left-[84px] top-[341px] w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
           >
             <Icon src={Plus} width="24" />
           </button>
