@@ -9,17 +9,16 @@
 
   import ImperialLogo from '$lib/logo/imperial-logo.svelte';
   import Menu from '$lib/logo/menu.svelte';
-  import WhatWeDo from '$lib/clip/what-we-do.svelte';
   import ChevronDown from '$lib/icon/heroicons/ChevronDown.js';
   import Plus from '$lib/icon/heroicons/Plus.js';
 
   let innerHeight: number = browser ? window.innerHeight : 0;
 </script>
 
-<svelte:window bind:innerHeight />
-
+<svelte:window bind:innerHeight on:load={() => window.scrollTo({ top: 0 })} />
 <div
   class="w-full h-full p-10 fixed inset-0 flex flex-col justify-between z-50 pointer-events-none"
+  in:scale={{ duration: 1500, start: 0.9, delay: 3000 }}
 >
   <div class="flex items-center justify-between">
     <h1 class="text-5xl">
@@ -37,12 +36,17 @@
 </div>
 
 <div class="fixed top-0 w-full h-screen flex items-center justify-center -z-50">
-  <h1 class="text-6xl uppercase font-light text-center flex flex-col">
-    <span> Design is more than beauty. </span>
-    <span> Engineering is more than science. </span>
+  <h1 class="text-6xl uppercase font-light text-center">
+    <span in:fade={{ duration: 1000, delay: 0 }}
+      >Design is more than beauty.<br /></span
+    >
+    <span in:fade={{ duration: 1000, delay: 1500 }}
+      >Engineering is more than science.</span
+    >
   </h1>
   <div
     class="text-white absolute top-3/4 left-1/2 -translate-y-1/2 -translate-x-1/2"
+    in:fly={{ y: 150, duration: 1500, delay: 3000 }}
   >
     <Icon src={ChevronDown} size="48" />
   </div>
@@ -58,9 +62,9 @@
   </svg>
 </Scroll>
 
-<div class="w-full h-[250vh] flex flex-col">
+<div class="w-full">
   <div
-    class="h-screen w-full sticky inset-0 -z-10 overflow-hidden"
+    class="h-screen w-full sticky inset-0 -z-10"
     style="
             background: linear-gradient(-45deg, rgba(255,188,85,1) 0%, rgba(223,0,56,1) 50%, rgba(158,65,208,1) 100%;
             background-position: 0.25;
@@ -68,22 +72,28 @@
           "
   />
 
-  <div
-    class="absolute top-[100vh] w-full h-screen flex items-center justify-center"
-  >
-    <h1 class="text-4xl uppercase font-light text-center flex flex-col">
-      <span>We know what shapes the future.</span>
-      <span>We know design engineering can change the world.</span>
-    </h1>
-  </div>
-  <div
-    class="absolute top-[150vh] w-full h-screen flex items-center justify-center"
-  >
-    <h1 class="text-4xl uppercase font-light text-center flex flex-col">
-      <span>We are tomorrow's designers, engineers, makers and thinkers.</span>
-      <span>We think freely, paving new ways of thinking and doing.</span>
-    </h1>
-  </div>
+  <Parallax sections={1.5} threshold={{ top: 0 }}>
+    <ParallaxLayer
+      rate={0.15}
+      style="display: flex; align-items: center; justify-content: center;"
+    >
+      <h1 class="text-4xl uppercase font-light text-center flex flex-col">
+        <span>We know what shapes the future.</span>
+        <span>We know design engineering can change the world.</span>
+      </h1>
+    </ParallaxLayer>
+    <ParallaxLayer
+      rate={0.175}
+      offset={0.5}
+      style="display: flex; align-items: center; justify-content: center;"
+    >
+      <h1 class="text-4xl uppercase font-light text-center flex flex-col">
+        <span>We are tomorrow's designers, engineers, makers and thinkers.</span
+        >
+        <span>We think freely, paving new ways of thinking and doing.</span>
+      </h1>
+    </ParallaxLayer>
+  </Parallax>
 </div>
 
 <Parallax sections={1} threshold={{ top: 0 }} style="background-color: black;">
