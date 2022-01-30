@@ -530,6 +530,11 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
+focus-options-polyfill@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/focus-options-polyfill/-/focus-options-polyfill-1.6.0.tgz#12ef3081dae9801d32dfcffd7b69259ca8f57198"
+  integrity sha512-uyrAmLZrPnUItQY5wTdg31TO9GGZRGsh/jmohUg9oLmLi/sw5y7LlTV/mwyd6rvbxIOGwmRiv6LcTS8w7Bk9NQ==
+
 fractils@^1.0.16:
   version "1.0.16"
   resolved "https://registry.yarnpkg.com/fractils/-/fractils-1.0.16.tgz#35600e165ddfab93fd76578e9c281f73728c3e7c"
@@ -1016,6 +1021,13 @@ svelte-hmr@^0.14.9:
   version "0.14.9"
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.14.9.tgz#35f277efc789e1a6230185717347cddb2f8e9833"
   integrity sha512-bKE9+4qb4sAnA+TKHiYurUl970rjA0XmlP9TEP7K/ncyWz3m81kA4HOgmlZK/7irGK7gzZlaPDI3cmf8fp/+tg==
+
+svelte-parallax@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/svelte-parallax/-/svelte-parallax-0.3.1.tgz#a56fed19f103444814b224167da7150d32f782b6"
+  integrity sha512-Ec41z29CCXeOiSbBIFZYsy/A/o0xrxKCmVbTnbzCi4gOGukG1OHMzoUqIkvVCLxX6eJDh1Etg0qZZk6Z9W6SHA==
+  dependencies:
+    focus-options-polyfill "^1.6.0"
 
 svelte-preprocess@^4.0.0, svelte-preprocess@^4.9.4:
   version "4.10.2"

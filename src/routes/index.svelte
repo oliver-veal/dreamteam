@@ -1,7 +1,7 @@
 <script lang="ts">
   import { browser } from '$app/env';
   import { fade, scale, fly } from 'svelte/transition';
-  import { OnMount } from 'fractils';
+  import { Parallax, ParallaxLayer } from 'svelte-parallax';
 
   import Button from '$lib/button/Button.svelte';
   import Icon from '$lib/icon/Icon.svelte';
@@ -9,108 +9,180 @@
 
   import ImperialLogo from '$lib/logo/imperial-logo.svelte';
   import Menu from '$lib/logo/menu.svelte';
+  import WhatWeDo from '$lib/clip/what-we-do.svelte';
   import ChevronDown from '$lib/icon/heroicons/ChevronDown.js';
+  import Plus from '$lib/icon/heroicons/Plus.js';
 
   let innerHeight: number = browser ? window.innerHeight : 0;
-  let scrollY;
 </script>
 
-<svelte:window
-  bind:innerHeight
-  bind:scrollY
-  on:load={() => window.scrollTo({ top: 0 })}
-/>
+<svelte:window bind:innerHeight />
 
-<OnMount>
-  <div
-    class="w-full h-full p-10 fixed inset-0 flex flex-col justify-between z-20"
-    in:scale={{ duration: 500, start: 0.9, delay: 3000 }}
-  >
-    <div class="flex items-center justify-between">
-      <h1 class="text-5xl">
-        dream<span class="font-light">team</span>
-      </h1>
-      <Menu width="30" fill="#fff" />
-    </div>
-    <div class="flex items-center justify-between">
-      <ImperialLogo width="200" fill="#fff" />
+<div
+  class="w-full h-full p-10 fixed inset-0 flex flex-col justify-between z-50 pointer-events-none"
+>
+  <div class="flex items-center justify-between">
+    <h1 class="text-5xl">
+      dream<span class="font-light">team</span>
+    </h1>
+    <Menu width="30" fill="#fff" />
+  </div>
+  <div class="flex items-center justify-between">
+    <ImperialLogo width="200" fill="#fff" />
 
+    <div class="pointer-events-auto">
       <Button>Contact</Button>
     </div>
   </div>
-</OnMount>
+</div>
 
-<OnMount>
+<div class="fixed top-0 w-full h-screen flex items-center justify-center -z-50">
+  <h1 class="text-6xl uppercase font-light text-center flex flex-col">
+    <span> Design is more than beauty. </span>
+    <span> Engineering is more than science. </span>
+  </h1>
   <div
-    class="fixed w-full h-full flex flex-col items-center justify-center z-30"
+    class="text-white absolute top-3/4 left-1/2 -translate-y-1/2 -translate-x-1/2"
   >
-    <Scroll start={innerHeight * 0.75} end={innerHeight * 1} let:s={out}>
-      <h1
-        class="absolute text-6xl uppercase font-light text-center flex flex-col"
-        style="opacity: {1 - out}"
-      >
-        <span in:fade={{ duration: 1000, delay: 0 }}>
-          Design is more than beauty.
-        </span>
-        <span in:fade={{ duration: 1000, delay: 1500 }}>
-          Engineering is more than science.
-        </span>
-      </h1>
-    </Scroll>
+    <Icon src={ChevronDown} size="48" />
+  </div>
+</div>
 
-    <Scroll start={innerHeight * 1} end={innerHeight * 1.1} let:s>
-      <Scroll start={innerHeight * 1.9} end={innerHeight * 2} let:s={out}>
+<Scroll start={0} end={innerHeight} let:s>
+  <svg class="fixed inset-0 w-full h-full">
+    <defs>
+      <clipPath id="clip">
+        <circle cx="50%" cy="75%" r="{s * 100}%" />
+      </clipPath>
+    </defs>
+  </svg>
+</Scroll>
+
+<div class="w-full h-[250vh] flex flex-col">
+  <div
+    class="h-screen w-full sticky inset-0 -z-10 overflow-hidden"
+    style="
+            background: linear-gradient(-45deg, rgba(255,188,85,1) 0%, rgba(223,0,56,1) 50%, rgba(158,65,208,1) 100%;
+            background-position: 0.25;
+            clip-path: url(#clip);
+          "
+  />
+
+  <div
+    class="absolute top-[100vh] w-full h-screen flex items-center justify-center"
+  >
+    <h1 class="text-4xl uppercase font-light text-center flex flex-col">
+      <span>We know what shapes the future.</span>
+      <span>We know design engineering can change the world.</span>
+    </h1>
+  </div>
+  <div
+    class="absolute top-[150vh] w-full h-screen flex items-center justify-center"
+  >
+    <h1 class="text-4xl uppercase font-light text-center flex flex-col">
+      <span>We are tomorrow's designers, engineers, makers and thinkers.</span>
+      <span>We think freely, paving new ways of thinking and doing.</span>
+    </h1>
+  </div>
+</div>
+
+<Parallax sections={1} threshold={{ top: 0 }} style="background-color: black;">
+  <ParallaxLayer
+    rate={0.05}
+    style="display: flex; align-items: center; justify-content: center;"
+  >
+    <div class="bg-white rounded-full w-10 h-10" />
+  </ParallaxLayer>
+  <ParallaxLayer
+    rate={0.15}
+    style="display: flex; align-items: center; justify-content: center;"
+  >
+    <div class="bg-white rounded-full w-10 h-10" />
+  </ParallaxLayer>
+  <ParallaxLayer
+    rate={0.1}
+    style="display: flex; align-items: center; justify-content: center;"
+  >
+    <div class="bg-white rounded-full w-10 h-10" />
+  </ParallaxLayer>
+  <ParallaxLayer
+    rate={-0.1}
+    style="display: flex; align-items: center; justify-content: center;"
+  >
+    <div class="bg-white rounded-full w-10 h-10" />
+  </ParallaxLayer>
+  <ParallaxLayer
+    rate={-0.15}
+    style="display: flex; align-items: center; justify-content: center;"
+  >
+    <div class="bg-white rounded-full w-10 h-10" />
+  </ParallaxLayer>
+</Parallax>
+
+<Parallax sections={1} threshold={{ top: 0 }} style="background-color: black;">
+  <ParallaxLayer
+    rate={0.05}
+    style="display: flex; align-items: center; justify-content: center;"
+  >
+    <div class="flex w-full h-full">
+      <div class="flex w-1/2 items-center justify-end">
         <h1
-          class="absolute text-6xl uppercase font-light text-center flex flex-col"
-          style="opacity: {s - out}"
+          class="text-6xl uppercase font-light text-center flex flex-col px-32"
         >
-          <span>We know what shapes the future.</span>
-          <span>We know design engineering can change the world.</span>
+          What we do
         </h1>
-      </Scroll>
-    </Scroll>
-
-    <Scroll start={innerHeight * 2} end={innerHeight * 2.1} let:s>
-      <Scroll start={innerHeight * 2.9} end={innerHeight * 3} let:s={out}>
-        <h1
-          class="absolute text-6xl uppercase font-light text-center flex flex-col"
-          style="opacity: {s - out}"
-        >
-          <span
-            >We are tomorrow's designers, engineers, makers and thinkers.</span
-          >
-          <span>We think freely, paving new ways of thinking and doing.</span>
-        </h1>
-      </Scroll>
-    </Scroll>
-
-    <div
-      in:fly={{ y: 100, duration: 1500, delay: 3000 }}
-      class="text-white absolute top-3/4 left-1/2 z-50 -translate-y-1/2 -translate-x-1/2"
-    >
-      <Icon src={ChevronDown} size="48" />
+      </div>
     </div>
-  </div>
-</OnMount>
+  </ParallaxLayer>
+  <ParallaxLayer
+    rate={0.15}
+    style="display: flex; flex-direction: column; align-items: center; justify-content: center;"
+  >
+    <div class="flex w-full h-full justify-end">
+      <div class="flex w-1/2 items-center justify-start pl-32 z-50">
+        <div
+          class="relative h-[404px] w-[192px]"
+          style="
+      background: linear-gradient(-20deg, rgba(255,188,85,1) 0%, rgba(223,0,56,1) 50%, rgba(158,65,208,1) 100%;
+      clip-path: url(#wwd-clip);
+      "
+        >
+          <button
+            class="flex items-center justify-center absolute left-[13px] top-[3px] inset-0 w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
+          >
+            <Icon src={Plus} width="24" />
+          </button>
+          <button
+            class="flex items-center justify-center absolute left-[128px] top-[94px] inset-0 w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
+          >
+            <Icon src={Plus} width="24" />
+          </button>
+          <button
+            class="flex items-center justify-center absolute left-[2px] top-[245px] inset-0 w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
+          >
+            <Icon src={Plus} width="24" />
+          </button>
+          <button
+            class="flex items-center justify-center absolute left-[84px] top-[341px] inset-0 w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
+          >
+            <Icon src={Plus} width="24" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </ParallaxLayer>
+</Parallax>
 
-<OnMount>
-  <div in:fade={{ duration: 500, delay: 0 }}>
-    <div
-      class="h-screen w-screen fixed inset-0"
-      style="
-          background: linear-gradient(-45deg, rgba(255,188,85,1) 0%, rgba(223,0,56,1) 50%, rgba(158,65,208,1) 100%;
-          background-position: 0.25;
-          clip-path: url(#clip);
-        "
-    />
-    <Scroll start={0} end={innerHeight} let:s>
-      <svg width="100vw" height="100vh" class="fixed inset-0">
-        <defs>
-          <clipPath id="clip">
-            <circle cx="50%" cy="75%" r="{s * 100}%" />
-          </clipPath>
-        </defs>
-      </svg>
-    </Scroll>
-  </div>
-</OnMount>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 192 404"
+  class="absolute inset-0 -z-50 w-full h-full"
+>
+  <defs>
+    <clipPath id="wwd-clip">
+      <path
+        d="M159.12,157.1a33.12,33.12,0,0,1-13.55-2.89A13.53,13.53,0,0,0,130,157.3L63.9,243.52A13.34,13.34,0,0,0,62,259.07a33,33,0,0,1-2.49,36.17,8.46,8.46,0,0,0,.32,10.61l29.4,34.35a8.32,8.32,0,0,0,10.29,1.86,33.18,33.18,0,1,1-11.21,9.77,8.23,8.23,0,0,0-.46-10.16L58.14,307a8.54,8.54,0,0,0-10.34-2,33.09,33.09,0,1,1-.92-59.79A13.39,13.39,0,0,0,62.26,242l66.08-86.19a13.37,13.37,0,0,0,1.89-15.58,33.22,33.22,0,0,1-2.18-27.71,13.14,13.14,0,0,0-4.27-14.86L77.72,61.36A13.42,13.42,0,0,0,62,60.71,33.09,33.09,0,1,1,74.83,44.36a13.48,13.48,0,0,0,4.3,15.22l45.93,36.15a13.47,13.47,0,0,0,15.79.61,33.13,33.13,0,1,1,18.27,60.76Z"
+      />
+    </clipPath>
+  </defs>
+</svg>
