@@ -42,7 +42,7 @@
 </div>
 
 <div class="fixed top-0 w-full h-screen flex items-center justify-center -z-50">
-  <h1 class="text-6xl uppercase font-light text-center">
+  <h1 class="text-6xl uppercase font-light text-center px-16">
     <span in:fade={{ duration: 1000, delay: 0 }}
       >Design is more than beauty.<br /></span
     >
@@ -78,25 +78,61 @@
           "
   />
 
-  <Parallax sections={1.5} threshold={{ top: 0 }}>
+  <Parallax sections={2.5} threshold={{ top: 0 }}>
     <ParallaxLayer
-      rate={0.15}
+      rate={0.1}
       style="display: flex; align-items: center; justify-content: center;"
     >
-      <h1 class="text-4xl uppercase font-light text-center flex flex-col">
-        <span>We know what shapes the future.</span>
+      <h1
+        class="text-4xl uppercase font-light text-center flex flex-col px-32 space-y-16"
+      >
+        <span>We know diversity determines innovative futures.</span>
         <span>We know design engineering can change the world.</span>
       </h1>
     </ParallaxLayer>
+
     <ParallaxLayer
-      rate={0.175}
+      rate={0.2}
       offset={0.5}
       style="display: flex; align-items: center; justify-content: center;"
     >
-      <h1 class="text-4xl uppercase font-light text-center flex flex-col">
-        <span>We are tomorrow's designers, engineers, makers and thinkers.</span
-        >
-        <span>We think freely, paving new ways of thinking and doing.</span>
+      <h1
+        class="text-4xl uppercase font-light text-center flex flex-col px-32 space-y-16"
+      >
+        <span>
+          We are tomorrow's designers, engineers, makers and thinkers.
+        </span>
+        <span>We think freely; paving new ways of thinking and doing. </span>
+      </h1>
+    </ParallaxLayer>
+
+    <ParallaxLayer
+      rate={0.3}
+      offset={1}
+      style="display: flex; align-items: center; justify-content: center;"
+    >
+      <h1
+        class="text-4xl uppercase font-light text-center flex flex-col px-32 space-y-16"
+      >
+        <span>
+          We engineer the future; incubating tomorrow's change-makers.
+        </span>
+        <span>
+          We are fearlessly optimistic; radical futures need radical action.
+        </span>
+      </h1>
+    </ParallaxLayer>
+
+    <ParallaxLayer
+      rate={0.4}
+      offset={1.5}
+      style="display: flex; align-items: center; justify-content: center;"
+    >
+      <h1
+        class="text-4xl uppercase font-light text-center flex flex-col px-32 space-y-16"
+      >
+        <span>We are defined by innovation.</span>
+        <span>We are defining design engineering. </span>
       </h1>
     </ParallaxLayer>
   </Parallax>
@@ -155,7 +191,7 @@
     style="display: flex; align-items: center; justify-content: center;"
   >
     <div
-      class="rounded-full w-48 h-48 absolute left-[20%] top-[35%]"
+      class="rounded-full w-48 h-48 absolute left-[20%] top-[30%]"
       style="background: url(/faces/5.png); background-size: cover;"
     />
   </ParallaxLayer>
