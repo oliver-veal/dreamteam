@@ -357,13 +357,27 @@
     style="display: flex; flex-direction: column; align-items: center; justify-content: center;"
   >
     <div class="flex w-full h-full items-start justify-center pt-96">
-      <div
-        class="relative h-[86px] w-[971px]"
-        style="
+      <div class="relative w-[971px]">
+        <div
+          class="absolute inset-0 h-[86px] w-[971px]"
+          style="
           background: linear-gradient(-20deg, rgba(255,188,85,1) 0%, rgba(223,0,56,1) 50%, rgba(158,65,208,1) 100%;
           clip-path: url(#hwdi-clip);
         "
-      />
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 955 70"
+          class="absolute left-[8px] top-[8px] h-[70px] w-[955px]"
+        >
+          <g>
+            <circle cx="35" cy="35" r="35" />
+            <circle cx="330" cy="35" r="35" />
+            <circle cx="625" cy="35" r="35" />
+            <circle cx="920" cy="35" r="35" />
+          </g>
+        </svg>
+      </div>
     </div>
   </ParallaxLayer>
 
