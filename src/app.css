@@ -1,7 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Mattone;
+  src: url("/fonts/Mattone.otf") format("opentype");
+}
+
 :root {
+  font-family: Mattone;
   font-size: 14px
+}
+
+h1 {
+  font-family: Montserrat, Helvetica, sans-serif;
 }

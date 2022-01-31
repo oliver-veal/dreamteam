@@ -15,7 +15,9 @@
   let innerHeight: number = browser ? window.innerHeight : 0;
 </script>
 
-<svelte:window bind:innerHeight on:load={() => window.scrollTo({ top: 0 })} />
+<!-- <svelte:window bind:innerHeight on:load={() => window.scrollTo({ top: 0 })} /> -->
+<svelte:window bind:innerHeight />
+
 <div
   class="w-full h-full p-10 fixed inset-0 flex flex-col justify-between z-50 pointer-events-none"
   in:scale={{ duration: 1500, start: 0.9, delay: 3000 }}
@@ -206,12 +208,88 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 192 404"
-  class="absolute inset-0 -z-50 w-full h-full"
+  class="absolute inset-0 w-full h-full"
 >
   <defs>
     <clipPath id="wwd-clip">
       <path
         d="M159.12,157.1a33.12,33.12,0,0,1-13.55-2.89A13.53,13.53,0,0,0,130,157.3L63.9,243.52A13.34,13.34,0,0,0,62,259.07a33,33,0,0,1-2.49,36.17,8.46,8.46,0,0,0,.32,10.61l29.4,34.35a8.32,8.32,0,0,0,10.29,1.86,33.18,33.18,0,1,1-11.21,9.77,8.23,8.23,0,0,0-.46-10.16L58.14,307a8.54,8.54,0,0,0-10.34-2,33.09,33.09,0,1,1-.92-59.79A13.39,13.39,0,0,0,62.26,242l66.08-86.19a13.37,13.37,0,0,0,1.89-15.58,33.22,33.22,0,0,1-2.18-27.71,13.14,13.14,0,0,0-4.27-14.86L77.72,61.36A13.42,13.42,0,0,0,62,60.71,33.09,33.09,0,1,1,74.83,44.36a13.48,13.48,0,0,0,4.3,15.22l45.93,36.15a13.47,13.47,0,0,0,15.79.61,33.13,33.13,0,1,1,18.27,60.76Z"
+      />
+    </clipPath>
+  </defs>
+</svg>
+
+<Parallax sections={1} threshold={{ top: 0 }} style="background-color: black;">
+  <ParallaxLayer
+    rate={0.15}
+    style="display: flex; align-items: center; justify-content: center;"
+  >
+    <div class="flex w-full h-full justify-center">
+      <div class="flex flex-col text-center">
+        <h1 class="text-2xl uppercase font-light pt-32">What we've made</h1>
+        <p>A small glimpse at our work</p>
+      </div>
+    </div>
+  </ParallaxLayer>
+  <ParallaxLayer
+    rate={0.25}
+    style="display: flex; flex-direction: column; align-items: center; justify-content: center;"
+  >
+    <div class="flex w-full items-center justify-center">
+      <div class="relative flex h-[325px] w-[300px] items-end">
+        <div
+          class="w-full h-full absolute"
+          style="background: url(/mask.png) right bottom; clip-path: url(#oval-clip);"
+        />
+      </div>
+      <div class="relative flex h-[325px] w-[300px] items-end">
+        <div
+          class="w-full h-full absolute"
+          style="background: url(/bic.png) right; clip-path: url(#oval-clip);"
+        />
+      </div>
+      <div class="relative flex h-[325px] w-[300px] items-end">
+        <div
+          class="w-full h-full absolute"
+          style="background: url(/bmx.png) right top; clip-path: url(#oval-clip);"
+        />
+      </div>
+    </div>
+  </ParallaxLayer>
+  <ParallaxLayer
+    rate={0.35}
+    style="display: flex; flex-direction: column; align-items: center; justify-content: center;"
+  >
+    <div class="flex w-full items-center justify-center">
+      <div class="relative flex h-[325px] w-[300px] items-end">
+        <div class="flex flex-col space-y-2.5 z-10 pb-10">
+          <img src="/mask.svg" class="w-10 h-10" alt="Mask" />
+          <p class="font-bold text-lg">Imperial Face Mask</p>
+        </div>
+      </div>
+      <div class="relative flex h-[325px] w-[300px] items-end">
+        <div class="flex flex-col space-y-2.5 z-10 pb-10">
+          <img src="/bic.svg" class="w-10 h-10" alt="BIC" />
+          <p class="font-bold text-lg">Blast Injury Conference</p>
+        </div>
+      </div>
+      <div class="relative flex h-[325px] w-[300px] items-end">
+        <div class="flex flex-col space-y-2.5 z-10 pb-10">
+          <img src="/bmx.svg" class="w-10 h-10" alt="BMX" />
+          <p class="font-bold text-lg">BMX Project</p>
+        </div>
+      </div>
+    </div>
+  </ParallaxLayer>
+</Parallax>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 189 308" class="w-0 h-0">
+  <defs>
+    <clipPath id="oval-clip">
+      <ellipse
+        rx="168.9"
+        ry="64.37"
+        transform="translate(200, 160) rotate(-63.76)"
       />
     </clipPath>
   </defs>
