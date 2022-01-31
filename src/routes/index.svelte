@@ -100,22 +100,6 @@
 
 <Parallax sections={1} threshold={{ top: 0 }} style="background-color: black;">
   <ParallaxLayer
-    rate={0.15}
-    style="display: flex; align-items: center; justify-content: center;"
-  >
-    <div
-      class="bg-white rounded-full w-14 h-14 absolute left-[75%] top-[37%]"
-    />
-  </ParallaxLayer>
-  <ParallaxLayer
-    rate={0.175}
-    style="display: flex; align-items: center; justify-content: center;"
-  >
-    <div
-      class="bg-white rounded-full w-16 h-16 absolute left-[65%] top-[28%]"
-    />
-  </ParallaxLayer>
-  <ParallaxLayer
     rate={0.2}
     style="display: flex; align-items: center; justify-content: center;"
   >
@@ -126,11 +110,31 @@
     </div>
   </ParallaxLayer>
   <ParallaxLayer
+    rate={0.15}
+    style="display: flex; align-items: center; justify-content: center;"
+  >
+    <div
+      class="rounded-full w-14 h-14 absolute left-[75%] top-[37%]"
+      style="background: url(/faces/1.png); background-size: cover;"
+    />
+  </ParallaxLayer>
+  <ParallaxLayer
+    rate={0.175}
+    style="display: flex; align-items: center; justify-content: center;"
+  >
+    <div
+      class="rounded-full w-20 h-20 absolute left-[65%] top-[28%]"
+      style="background: url(/faces/2.png); background-size: cover;"
+    />
+  </ParallaxLayer>
+
+  <ParallaxLayer
     rate={0.225}
     style="display: flex; align-items: center; justify-content: center;"
   >
     <div
-      class="bg-white rounded-full w-20 h-20 absolute left-[30%] top-[67%]"
+      class="rounded-full w-28 h-28 absolute left-[30%] top-[67%]"
+      style="background: url(/faces/3.png); background-size: cover;"
     />
   </ParallaxLayer>
   <ParallaxLayer
@@ -138,7 +142,8 @@
     style="display: flex; align-items: center; justify-content: center;"
   >
     <div
-      class="bg-white rounded-full w-24 h-24 absolute left-[60%] top-[75%]"
+      class="rounded-full w-36 h-36 absolute left-[60%] top-[75%]"
+      style="background: url(/faces/4.png); background-size: cover;"
     />
   </ParallaxLayer>
   <ParallaxLayer
@@ -146,7 +151,8 @@
     style="display: flex; align-items: center; justify-content: center;"
   >
     <div
-      class="bg-white rounded-full w-32 h-32 absolute left-[20%] top-[35%]"
+      class="rounded-full w-48 h-48 absolute left-[20%] top-[35%]"
+      style="background: url(/faces/5.png); background-size: cover;"
     />
   </ParallaxLayer>
 </Parallax>
@@ -208,7 +214,7 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 192 404"
-  class="absolute inset-0 w-full h-full"
+  class="absolute inset-0 w-full h-full -z-50"
 >
   <defs>
     <clipPath id="wwd-clip">
@@ -239,19 +245,19 @@
       <div class="relative flex h-[325px] w-[300px] items-end">
         <div
           class="w-full h-full absolute"
-          style="background: url(/mask.png) right bottom; clip-path: url(#oval-clip);"
+          style="background: url(/wwd/mask.png) right bottom; clip-path: url(#oval-clip);"
         />
       </div>
       <div class="relative flex h-[325px] w-[300px] items-end">
         <div
           class="w-full h-full absolute"
-          style="background: url(/bic.png) right; clip-path: url(#oval-clip);"
+          style="background: url(/wwd/bic.png) right; clip-path: url(#oval-clip);"
         />
       </div>
       <div class="relative flex h-[325px] w-[300px] items-end">
         <div
           class="w-full h-full absolute"
-          style="background: url(/bmx.png) right top; clip-path: url(#oval-clip);"
+          style="background: url(/wwd/bmx.png) right top; clip-path: url(#oval-clip);"
         />
       </div>
     </div>
@@ -263,19 +269,19 @@
     <div class="flex w-full items-center justify-center">
       <div class="relative flex h-[325px] w-[300px] items-end">
         <div class="flex flex-col space-y-2.5 z-10 pb-10">
-          <img src="/mask.svg" class="w-10 h-10" alt="Mask" />
+          <img src="/wwd/mask.svg" class="w-10 h-10" alt="Mask" />
           <p class="font-bold text-lg">Imperial Face Mask</p>
         </div>
       </div>
       <div class="relative flex h-[325px] w-[300px] items-end">
         <div class="flex flex-col space-y-2.5 z-10 pb-10">
-          <img src="/bic.svg" class="w-10 h-10" alt="BIC" />
+          <img src="/wwd/bic.svg" class="w-10 h-10" alt="BIC" />
           <p class="font-bold text-lg">Blast Injury Conference</p>
         </div>
       </div>
       <div class="relative flex h-[325px] w-[300px] items-end">
         <div class="flex flex-col space-y-2.5 z-10 pb-10">
-          <img src="/bmx.svg" class="w-10 h-10" alt="BMX" />
+          <img src="/wwd/bmx.svg" class="w-10 h-10" alt="BMX" />
           <p class="font-bold text-lg">BMX Project</p>
         </div>
       </div>
