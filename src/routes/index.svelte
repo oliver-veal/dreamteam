@@ -15,8 +15,8 @@
   let innerHeight: number = browser ? window.innerHeight : 0;
 </script>
 
-<!-- <svelte:window bind:innerHeight on:load={() => window.scrollTo({ top: 0 })} /> -->
-<svelte:window bind:innerHeight />
+<svelte:window bind:innerHeight on:load={() => window.scrollTo({ top: 0 })} />
+<!-- <svelte:window bind:innerHeight /> -->
 
 <head>
   <title> Dreamteam </title>
