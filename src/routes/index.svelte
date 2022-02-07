@@ -41,7 +41,7 @@
   </div>
 </div>
 
-<!-- <div class="fixed top-0 w-full h-screen flex items-center justify-center -z-50">
+<div class="fixed top-0 w-full h-screen flex items-center justify-center -z-50">
   <h1 class="text-6xl uppercase font-light text-center px-16">
     <span in:fade={{ duration: 1000, delay: 0 }}
       >Design is more than beauty.<br /></span
@@ -84,7 +84,7 @@
       <Icon src={ChevronDown} size="48" />
     </div>
   </ParallaxLayer>
-</Parallax> -->
+</Parallax>
 
 <!-- <svg class="fixed inset-0 w-full h-full">
   <defs>
