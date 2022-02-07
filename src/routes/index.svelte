@@ -15,8 +15,8 @@
   let innerHeight: number = browser ? window.innerHeight : 0;
 </script>
 
-<svelte:window bind:innerHeight on:load={() => window.scrollTo({ top: 0 })} />
-<!-- <svelte:window bind:innerHeight /> -->
+<!-- <svelte:window bind:innerHeight on:load={() => window.scrollTo({ top: 0 })} /> -->
+<svelte:window bind:innerHeight />
 
 <head>
   <title> Dreamteam </title>
@@ -41,7 +41,7 @@
   </div>
 </div>
 
-<div class="fixed top-0 w-full h-screen flex items-center justify-center -z-50">
+<!-- <div class="fixed top-0 w-full h-screen flex items-center justify-center -z-50">
   <h1 class="text-6xl uppercase font-light text-center px-16">
     <span in:fade={{ duration: 1000, delay: 0 }}
       >Design is more than beauty.<br /></span
@@ -58,17 +58,43 @@
   </div>
 </div>
 
-<Scroll start={0} end={innerHeight} let:s>
-  <svg class="fixed inset-0 w-full h-full">
-    <defs>
-      <clipPath id="clip">
-        <circle cx="50%" cy="75%" r="{s * 100}%" />
-      </clipPath>
-    </defs>
-  </svg>
-</Scroll>
+<Parallax sections={1} threshold={{ top: 0 }} style="background-color: black;">
+  <ParallaxLayer
+    rate={0.2}
+    style="display: flex; align-items: center; justify-content: center;"
+  >
+    <h1 class="text-6xl uppercase font-light text-center px-16">
+      <span in:fade={{ duration: 1000, delay: 0 }}
+        >Design is more than beauty.<br /></span
+      >
+      <span in:fade={{ duration: 1000, delay: 1500 }}
+        >Engineering is more than science.</span
+      >
+    </h1>
+  </ParallaxLayer>
 
-<div class="w-full">
+  <ParallaxLayer
+    rate={0.4}
+    style="display: flex; align-items: center; justify-content: center;"
+  >
+    <div
+      class="text-white absolute top-3/4 left-1/2 -translate-y-1/2 -translate-x-1/2"
+      in:fly={{ y: 150, duration: 1500, delay: 3000 }}
+    >
+      <Icon src={ChevronDown} size="48" />
+    </div>
+  </ParallaxLayer>
+</Parallax> -->
+
+<!-- <svg class="fixed inset-0 w-full h-full">
+  <defs>
+    <clipPath id="clip">
+      <circle cx="50%" cy="75%" r="{s * 100}%" />
+    </clipPath>
+  </defs>
+</svg> -->
+
+<!-- <div class="w-full">
   <div
     class="h-screen w-full sticky inset-0 -z-10"
     style="
@@ -136,7 +162,7 @@
       </h1>
     </ParallaxLayer>
   </Parallax>
-</div>
+</div> -->
 
 <Parallax sections={1} threshold={{ top: 0 }} style="background-color: black;">
   <ParallaxLayer
@@ -437,3 +463,157 @@
     </clipPath>
   </defs>
 </svg>
+
+<Parallax sections={1} threshold={{ top: 0 }} style="background-color: black;">
+  <ParallaxLayer
+    rate={0.15}
+    style="display: flex; align-items: center; justify-content: center;"
+  >
+    <div class="flex w-full h-full">
+      <div class="flex w-1/2 items-center justify-center">
+        <h1
+          class="text-6xl uppercase font-light text-center flex flex-col px-32"
+        >
+          What they say
+        </h1>
+      </div>
+    </div>
+  </ParallaxLayer>
+  <ParallaxLayer
+    rate={0.35}
+    style="display: flex; align-items: center; justify-content: end;"
+  >
+    <div class="flex w-1/2 h-full flex-col items-center justify-center">
+      <div class="flex p-10 space-x-20 items-center">
+        <img
+          src="/faces/5.png"
+          alt="Mazdak Ghajri"
+          class="rounded-full w-40 h-40"
+        />
+        <div class="flex flex-col space-y-5">
+          <h1 class="font-bold text-3xl max-w-[80%]">
+            <q>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy
+            </q>
+          </h1>
+          <div class="flex flex-col">
+            <b>Mazdak Ghajri</b>
+            <p>Client - Blast Injury Conference</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex p-10 space-x-20 items-center">
+        <img
+          src="/faces/4.png"
+          alt="Mazdak Ghajri"
+          class="rounded-full w-40 h-40"
+        />
+        <div class="flex flex-col space-y-5">
+          <h1 class="font-bold text-3xl max-w-[80%]">
+            <q>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy
+            </q>
+          </h1>
+          <div class="flex flex-col">
+            <b>Mazdak Ghajri</b>
+            <p>Client - Blast Injury Conference</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex p-10 space-x-20 items-center">
+        <img
+          src="/faces/3.png"
+          alt="Mazdak Ghajri"
+          class="rounded-full w-40 h-40"
+        />
+        <div class="flex flex-col space-y-5">
+          <h1 class="font-bold text-3xl max-w-[80%]">
+            <q>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy
+            </q>
+          </h1>
+          <div class="flex flex-col">
+            <b>Mazdak Ghajri</b>
+            <p>Client - Blast Injury Conference</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ParallaxLayer>
+</Parallax>
+
+<Parallax sections={1} threshold={{ top: 0 }} style="background-color: black;">
+  <ParallaxLayer
+    rate={0.1}
+    style="display: flex; align-items: start; justify-content: start;"
+  >
+    <div class="flex w-full h-[40%] justify-center items-center">
+      <div class="flex flex-col text-center">
+        <h1 class="text-6xl uppercase">What's Next</h1>
+      </div>
+    </div>
+  </ParallaxLayer>
+
+  <ParallaxLayer
+    rate={0.2}
+    style="display: flex; flex-direction: column; align-items: start; justify-content: start;"
+  >
+    <div class="flex w-full h-[45%] items-end justify-center">
+      <div class="flex w-full space-x-48">
+        <div class="flex w-1/2 justify-end">
+          <img src="/next/butterfly.svg" class="w-16 h-16" alt="Butterfly" />
+        </div>
+        <div class="flex w-1/2 justify-start">
+          <img src="/next/penta.svg" class="w-16 h-16" alt="Penta" />
+        </div>
+      </div>
+    </div>
+  </ParallaxLayer>
+
+  <ParallaxLayer
+    rate={0.3}
+    style="display: flex; align-items: end; justify-content: center;"
+  >
+    <div class="w-full h-[50%] flex justify-between items-start">
+      <div class="flex w-full space-x-48">
+        <div class="flex flex-col w-1/2 items-end space-y-10">
+          <h2 class="text-2xl">Butterfly</h2>
+          <div class="flex flex-col text-right">
+            <p>Product Design</p>
+            <p>UI / UX</p>
+            <p>Experience</p>
+          </div>
+          <div class="flex flex-col text-right max-w-[60%]">
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+              tation ullamcorper suscipit lobortis nisl
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col w-1/2 items-start space-y-10">
+          <h2 class="text-2xl">Penta</h2>
+          <div class="flex flex-col text-left">
+            <p>Logo Design</p>
+            <p>Strategy</p>
+            <p>Website</p>
+          </div>
+          <div class="flex flex-col text-left max-w-[60%]">
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+              tation ullamcorper suscipit lobortis nisl
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ParallaxLayer>
+</Parallax>
