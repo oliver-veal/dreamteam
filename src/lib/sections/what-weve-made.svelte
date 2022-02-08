@@ -9,8 +9,10 @@
   >
     <div class="flex w-full h-full justify-center">
       <div class="flex flex-col text-center">
-        <h1 class="text-2xl uppercase font-light pt-32">What we've made</h1>
-        <p>A small glimpse at our work</p>
+        <h1 class="text-3xl xl:text-6xl  uppercase font-light pt-32">
+          What we've made
+        </h1>
+        <p class="xl:text-2xl">A small glimpse at our work</p>
       </div>
     </div>
   </ParallaxLayer>
@@ -18,23 +20,26 @@
     rate={0.25}
     style="display: flex; flex-direction: column; align-items: center; justify-content: center;"
   >
-    <div class="flex w-full items-center justify-center">
-      <div class="relative flex h-[325px] w-[300px] items-end">
-        <div
-          class="w-full h-full absolute"
-          style="background: url(/wwd/mask.png) right bottom; clip-path: url(#oval-clip);"
+    <div class="flex w-full items-center justify-center sm:space-x-32">
+      <div>
+        <img
+          src="/what-weve-made/mask.png"
+          alt="Face Mask Project"
+          class="w-full max-h-[325px] object-cover"
         />
       </div>
-      <div class="relative flex h-[325px] w-[300px] items-end">
-        <div
-          class="w-full h-full absolute"
-          style="background: url(/wwd/bic.png) right; clip-path: url(#oval-clip);"
+      <div>
+        <img
+          src="/what-weve-made/bic.png"
+          alt="Blast Injury Conference Project"
+          class="w-full max-h-[325px] object-cover"
         />
       </div>
-      <div class="relative flex h-[325px] w-[300px] items-end">
-        <div
-          class="w-full h-full absolute"
-          style="background: url(/wwd/bmx.png) right top; clip-path: url(#oval-clip);"
+      <div>
+        <img
+          src="/what-weve-made/bmx.png"
+          alt="BMX Project"
+          class="w-full max-h-[325px] object-cover"
         />
       </div>
     </div>

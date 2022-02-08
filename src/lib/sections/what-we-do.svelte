@@ -6,32 +6,26 @@
 </script>
 
 <Parallax sections={1} threshold={{ top: 0 }} style="background-color: black;">
-  <ParallaxLayer
-    rate={0.15}
-    style="display: flex; align-items: center; justify-content: center;"
-  >
-    <div class="flex w-full h-full">
-      <div class="flex w-1/2 items-center justify-end">
-        <h1
-          class="text-6xl uppercase font-light text-center flex flex-col px-32"
-        >
-          What we do
-        </h1>
+  <ParallaxLayer rate={0.15}>
+    <div class="flex w-full h-full justify-start items-start">
+      <div
+        class="flex w-full sm:w-1/2 h-1/3 sm:h-full items-center justify-center"
+      >
+        <h1 class="text-3xl xl:text-6xl uppercase font-light">What we do</h1>
       </div>
     </div>
   </ParallaxLayer>
-  <ParallaxLayer
-    rate={0.25}
-    style="display: flex; flex-direction: column; align-items: center; justify-content: center;"
-  >
-    <div class="flex w-full h-full justify-end">
-      <div class="flex w-1/2 items-center justify-start pl-32 z-50">
+  <ParallaxLayer rate={0.25}>
+    <div class="flex w-full h-full justify-end items-end">
+      <div
+        class="flex w-full sm:w-1/2 h-3/4 sm:h-full items-center justify-center z-50"
+      >
         <div
           class="relative h-[404px] w-[192px]"
           style="
-      background: linear-gradient(-20deg, rgba(255,188,85,1) 0%, rgba(223,0,56,1) 50%, rgba(158,65,208,1) 100%;
-      clip-path: url(#wwd-clip);
-      "
+            background: linear-gradient(-20deg, rgba(255,188,85,1) 0%, rgba(223,0,56,1) 50%, rgba(158,65,208,1) 100%;
+            clip-path: url(#wwd-clip);
+          "
         >
           <button
             class="flex items-center justify-center absolute left-[13px] top-[3px] w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"

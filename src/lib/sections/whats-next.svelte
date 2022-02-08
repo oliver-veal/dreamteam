@@ -9,7 +9,7 @@
   >
     <div class="flex w-full h-[40%] justify-center items-center">
       <div class="flex flex-col text-center">
-        <h1 class="text-6xl uppercase">What's Next</h1>
+        <h1 class="text-3xl xl:text-6xl uppercase">What's Next</h1>
       </div>
     </div>
   </ParallaxLayer>
@@ -19,7 +19,7 @@
     style="display: flex; flex-direction: column; align-items: start; justify-content: start;"
   >
     <div class="flex w-full h-[45%] items-end justify-center">
-      <div class="flex w-full space-x-48">
+      <div class="flex w-full space-x-8 xl:space-x-48">
         <div class="flex w-1/2 justify-end">
           <img src="/next/butterfly.svg" class="w-16 h-16" alt="Butterfly" />
         </div>
@@ -35,7 +35,7 @@
     style="display: flex; align-items: end; justify-content: center;"
   >
     <div class="w-full h-[50%] flex justify-between items-start">
-      <div class="flex w-full space-x-48">
+      <div class="flex w-full space-x-8 xl:space-x-48">
         <div class="flex flex-col w-1/2 items-end space-y-10">
           <h2 class="text-2xl">Butterfly</h2>
           <div class="flex flex-col text-right">

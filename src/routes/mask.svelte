@@ -1,6 +1,21 @@
+<script lang="ts">
+  import Menu from '$lib/logo/menu.svelte';
+</script>
+
 <head>
   <title> Dreamteam </title>
 </head>
+
+<div
+  class="w-full h-full p-10 fixed inset-0 flex flex-col justify-start z-50 pointer-events-none"
+>
+  <div class="flex items-center justify-between">
+    <h1 class="text-5xl">
+      dream<span class="font-light">team</span>
+    </h1>
+    <Menu width="30" fill="#fff" />
+  </div>
+</div>
 
 <div
   class="min-w-full min-h-full flex p-10 bg-black items-center justify-center"

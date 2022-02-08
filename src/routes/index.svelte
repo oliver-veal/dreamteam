@@ -24,17 +24,17 @@
 </head>
 
 <div
-  class="w-full h-full p-10 fixed inset-0 flex flex-col justify-between z-50 pointer-events-none"
+  class="w-full h-full p-5 xl:p-10 fixed inset-0 flex flex-col justify-between z-50 pointer-events-none"
   in:scale={{ duration: 1500, start: 0.9, delay: 3000 }}
 >
   <div class="flex items-center justify-between">
-    <h1 class="text-5xl">
+    <h1 class="text-3xl xl:text-5xl">
       dream<span class="font-light">team</span>
     </h1>
-    <Menu width="30" fill="#fff" />
+    <Menu class="w-6 xl:w-8" fill="#fff" />
   </div>
   <div class="flex items-center justify-between">
-    <ImperialLogo width="200" fill="#fff" />
+    <ImperialLogo class="w-[100px] xl:w-[200px]" fill="#fff" />
 
     <div class="pointer-events-auto">
       <a href="mailto:contact@dreamteamdesign.co.uk">
@@ -49,7 +49,9 @@
     rate={0.2}
     style="display: flex; align-items: center; justify-content: center;"
   >
-    <h1 class="text-6xl uppercase font-light text-center px-16">
+    <h1
+      class="text-3xl xl:text-6xl uppercase font-light text-center px-8 xl:px-16"
+    >
       <span in:fade={{ duration: 1000, delay: 0 }}>
         Design is more than beauty.<br />
       </span>
@@ -67,7 +69,7 @@
       class="text-white absolute top-3/4 left-1/2 -translate-y-1/2 -translate-x-1/2"
       in:fly={{ y: 150, duration: 1500, delay: 3000 }}
     >
-      <Icon src={ChevronDown} size="48" />
+      <Icon src={ChevronDown} size="36" />
     </div>
   </ParallaxLayer>
 </Parallax>

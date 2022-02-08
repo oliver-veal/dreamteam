@@ -9,7 +9,7 @@
   >
     <div class="flex w-full h-[40%] justify-center items-center">
       <div class="flex flex-col text-center">
-        <h1 class="text-6xl uppercase">How we do it</h1>
+        <h1 class="text-3xl xl:text-6xl uppercase">How we do it</h1>
       </div>
     </div>
   </ParallaxLayer>
@@ -49,7 +49,7 @@
   >
     <div class="w-[1200px] h-[40%] flex justify-between items-start">
       <div class="w-1/4 px-10 flex flex-col text-center space-y-5">
-        <h2 class="font-bold text-3xl">Brief</h2>
+        <h2 class="font-bold text-xl xl:text-3xl">Brief</h2>
         <p>
           You tell us what the challenge is, what you need and why. If you don't
           know the details yet, we can help you define the brief so we know what
@@ -57,7 +57,7 @@
         </p>
       </div>
       <div class="w-1/4 px-10 flex flex-col text-center space-y-5">
-        <h2 class="font-bold text-3xl">Discover</h2>
+        <h2 class="font-bold text-xl xl:text-3xl">Discover</h2>
         <p>
           Working with you, we scope out the challenge. Through methods like
           desk research, user research, interviews and market research, we
@@ -67,7 +67,7 @@
         </p>
       </div>
       <div class="w-1/4 px-10 flex flex-col text-center space-y-5">
-        <h2 class="font-bold text-3xl">Ideation</h2>
+        <h2 class="font-bold text-xl xl:text-3xl">Ideation</h2>
         <p>
           We identify potential solutions, illustrating and prototyping the
           possibilities in an iterative and collaborative process with you. We
@@ -76,7 +76,7 @@
         </p>
       </div>
       <div class="w-1/4 px-10 flex flex-col text-center space-y-5">
-        <h2 class="font-bold text-3xl">Delivery</h2>
+        <h2 class="font-bold text-xl xl:text-3xl">Delivery</h2>
         <p>
           We deliver the outcomes as required by the brief. The exact formula
           for what we deliver and how we deliver it depends on the initial

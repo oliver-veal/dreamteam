@@ -18,7 +18,7 @@
     style="display: flex; align-items: center; justify-content: center;"
   >
     <div
-      class="rounded-full w-14 h-14 absolute left-[75%] top-[37%]"
+      class="rounded-full w-10 xl:w-14 h-10 xl:h-14 absolute left-[75%] top-[37%]"
       style="background: url(/faces/1.png); background-size: cover;"
     />
   </ParallaxLayer>
@@ -27,7 +27,7 @@
     style="display: flex; align-items: center; justify-content: center;"
   >
     <div
-      class="rounded-full w-20 h-20 absolute left-[65%] top-[28%]"
+      class="rounded-full w-16 xl:w-20 h-16 xl:h-20 absolute left-[65%] top-[28%]"
       style="background: url(/faces/2.png); background-size: cover;"
     />
   </ParallaxLayer>
@@ -37,7 +37,7 @@
     style="display: flex; align-items: center; justify-content: center;"
   >
     <div
-      class="rounded-full w-28 h-28 absolute left-[30%] top-[67%]"
+      class="rounded-full w-24 xl:w-28 h-24 xl:h-28 absolute left-[20%] top-[67%]"
       style="background: url(/faces/3.png); background-size: cover;"
     />
   </ParallaxLayer>
@@ -46,7 +46,7 @@
     style="display: flex; align-items: center; justify-content: center;"
   >
     <div
-      class="rounded-full w-36 h-36 absolute left-[60%] top-[75%]"
+      class="rounded-full w-28 xl:w-36 h-28 xl:h-36 absolute left-[60%] top-[75%]"
       style="background: url(/faces/4.png); background-size: cover;"
     />
   </ParallaxLayer>
@@ -55,7 +55,7 @@
     style="display: flex; align-items: center; justify-content: center;"
   >
     <div
-      class="rounded-full w-48 h-48 absolute left-[20%] top-[30%]"
+      class="rounded-full w-32 xl:w-48 h-32 xl:h-48 absolute left-[20%] top-[20%]"
       style="background: url(/faces/5.png); background-size: cover;"
     />
   </ParallaxLayer>
