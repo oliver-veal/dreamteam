@@ -37,7 +37,9 @@
     <ImperialLogo width="200" fill="#fff" />
 
     <div class="pointer-events-auto">
-      <Button>Contact</Button>
+      <a href="mailto:contact@dreamteamdesign.co.uk">
+        <Button>Contact</Button>
+      </a>
     </div>
   </div>
 </div>
