@@ -104,7 +104,11 @@
   }
 </script>
 
-<svelte:window bind:scrollY={$y} bind:outerHeight />
+<svelte:window
+  bind:scrollY={$y}
+  bind:outerHeight
+  on:resize={() => setTimeout(setDimensions, 0)}
+/>
 
 <div class="parallax-container" bind:this={container} {style}>
   <slot />

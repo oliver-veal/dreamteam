@@ -4,6 +4,7 @@
 
   import ImperialLogo from '$lib/logo/imperial-logo.svelte';
   import Menu from '$lib/logo/menu.svelte';
+  import Hero from '$lib/sections/hero.svelte';
   import WhatWeveMade from '$lib/sections/what-weve-made.svelte';
   import HowWeDoIt from '$lib/sections/how-we-do-it.svelte';
   import WhatTheySay from '$lib/sections/what-they-say.svelte';
@@ -24,7 +25,7 @@
 </head>
 
 <div
-  class="w-full h-full p-5 xl:p-10 fixed inset-0 flex flex-col justify-between z-50 pointer-events-none"
+  class="w-full h-full p-2.5 xl:p-10 fixed inset-0 flex flex-col justify-between z-50 pointer-events-none"
   in:scale={{ duration: 1500, start: 0.9, delay: 3000 }}
 >
   <div class="flex items-center justify-between">
@@ -44,46 +45,20 @@
   </div>
 </div>
 
-<Parallax sections={1} threshold={{ top: 0 }} style="background-color: black;">
-  <ParallaxLayer
-    rate={0.2}
-    style="display: flex; align-items: center; justify-content: center;"
-  >
-    <h1
-      class="text-3xl xl:text-6xl uppercase font-light text-center px-8 xl:px-16"
-    >
-      <span in:fade={{ duration: 1000, delay: 0 }}>
-        Design is more than beauty.<br />
-      </span>
-      <span in:fade={{ duration: 1000, delay: 1500 }}>
-        Engineering is more than science.
-      </span>
-    </h1>
-  </ParallaxLayer>
-
-  <ParallaxLayer
-    rate={0.4}
-    style="display: flex; align-items: center; justify-content: center;"
-  >
-    <div
-      class="text-white absolute top-3/4 left-1/2 -translate-y-1/2 -translate-x-1/2"
-      in:fly={{ y: 150, duration: 1500, delay: 3000 }}
-    >
-      <Icon src={ChevronDown} size="36" />
-    </div>
-  </ParallaxLayer>
-</Parallax>
-
 <!-- <Manifesto /> -->
 
-<WhoWeAre />
+<main class="space-y-48">
+  <Hero />
 
-<WhatWeDo />
+  <WhoWeAre />
 
-<WhatWeveMade />
+  <WhatWeDo />
 
-<HowWeDoIt />
+  <WhatWeveMade />
 
-<WhatTheySay />
+  <HowWeDoIt />
 
-<WhatsNext />
+  <WhatTheySay />
+
+  <WhatsNext />
+</main>

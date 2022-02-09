@@ -1,61 +1,48 @@
 <script lang="ts">
   import Icon from '$lib/icon/Icon.svelte';
   import Plus from '$lib/icon/heroicons/Plus.js';
-
-  import { Parallax, ParallaxLayer } from '$lib/svelte-parallax/index';
 </script>
 
-<Parallax
-  sections={1}
-  threshold={{ top: 0, bottom: 0 }}
-  style="background-color: black;"
->
-  <ParallaxLayer rate={0.15}>
-    <div class="flex w-full h-full justify-start items-start">
+<section class="w-full flex flex-col p-5 space-y-24">
+  <h1 class="w-full text-center text-3xl xl:text-6xl uppercase font-light">
+    What we do
+  </h1>
+
+  <div class="flex w-full h-full justify-center items-center">
+    <div
+      class="flex w-full sm:w-1/2 h-3/4 sm:h-full items-center justify-center z-50"
+    >
       <div
-        class="flex w-full sm:w-1/2 h-1/3 sm:h-full items-center justify-center"
-      >
-        <h1 class="text-3xl xl:text-6xl uppercase font-light">What we do</h1>
-      </div>
-    </div>
-  </ParallaxLayer>
-  <ParallaxLayer rate={0.25}>
-    <div class="flex w-full h-full justify-end items-end">
-      <div
-        class="flex w-full sm:w-1/2 h-3/4 sm:h-full items-center justify-center z-50"
-      >
-        <div
-          class="relative h-[404px] w-[192px]"
-          style="
+        class="relative h-[404px] w-[192px]"
+        style="
             background: linear-gradient(-20deg, rgba(255,188,85,1) 0%, rgba(223,0,56,1) 50%, rgba(158,65,208,1) 100%;
             clip-path: url(#wwd-clip);
           "
+      >
+        <button
+          class="flex items-center justify-center absolute left-[13px] top-[3px] w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
         >
-          <button
-            class="flex items-center justify-center absolute left-[13px] top-[3px] w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
-          >
-            <Icon src={Plus} width="24" />
-          </button>
-          <button
-            class="flex items-center justify-center absolute left-[128px] top-[94px] w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
-          >
-            <Icon src={Plus} width="24" />
-          </button>
-          <button
-            class="flex items-center justify-center absolute left-[2px] top-[245px] w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
-          >
-            <Icon src={Plus} width="24" />
-          </button>
-          <button
-            class="flex items-center justify-center absolute left-[84px] top-[341px] w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
-          >
-            <Icon src={Plus} width="24" />
-          </button>
-        </div>
+          <Icon src={Plus} width="24" />
+        </button>
+        <button
+          class="flex items-center justify-center absolute left-[128px] top-[94px] w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
+        >
+          <Icon src={Plus} width="24" />
+        </button>
+        <button
+          class="flex items-center justify-center absolute left-[2px] top-[245px] w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
+        >
+          <Icon src={Plus} width="24" />
+        </button>
+        <button
+          class="flex items-center justify-center absolute left-[84px] top-[341px] w-[61px] h-[60px] rounded-full bg-black hover:bg-transparent text-black hover:text-white transition-colors"
+        >
+          <Icon src={Plus} width="24" />
+        </button>
       </div>
     </div>
-  </ParallaxLayer>
-</Parallax>
+  </div>
+</section>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
