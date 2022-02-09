@@ -24,7 +24,9 @@
     rate={0.25}
     style="display: flex; align-items: center; justify-content: center;"
   >
-    <div class="flex w-full items-center justify-center md:space-x-32 p-2">
+    <div
+      class="flex w-full items-center justify-center md:space-x-32 p-2 sm:p-10"
+    >
       <div>
         <img
           src="/what-weve-made/mask.png"
@@ -52,7 +54,7 @@
     rate={0.35}
     style="display: flex; flex-direction: column; align-items: center; justify-content: center;"
   >
-    <div class="flex w-full items-center justify-center p-2">
+    <div class="flex w-full items-center justify-center p-2 sm:p-10">
       <div
         class="relative flex h-[325px] w-[300px] items-end cursor-pointer hover:pb-8 transition-all duration-300"
       >

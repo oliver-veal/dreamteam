@@ -35,7 +35,7 @@
       class="w-[1200px] h-[60%] sm:h-[40%] flex flex-col sm:flex-row justify-start sm:justify-between items-start space-y-5 sm:space-y-0"
     >
       <div
-        class="w-full sm:w-1/4 px-5 sm:px-10 flex flex-col text-center space-y-2 sm:space-y-5"
+        class="w-full sm:w-1/4 px-5 sm:px-5 flex flex-col text-center space-y-2 sm:space-y-5"
       >
         <h2 class="font-bold text-xl xl:text-3xl">Brief</h2>
         <p class="text-sm sm:text-base">
@@ -45,7 +45,7 @@
         </p>
       </div>
       <div
-        class="w-full sm:w-1/4 px-5 sm:px-10 flex flex-col text-center space-y-2 sm:space-y-5"
+        class="w-full sm:w-1/4 px-5 sm:px-5 flex flex-col text-center space-y-2 sm:space-y-5"
       >
         <h2 class="font-bold text-xl xl:text-3xl">Discover</h2>
         <p class="text-sm sm:text-base">
@@ -55,7 +55,7 @@
         </p>
       </div>
       <div
-        class="w-full sm:w-1/4 px-5 sm:px-10 flex flex-col text-center space-y-2 sm:space-y-5"
+        class="w-full sm:w-1/4 px-5 sm:px-5 flex flex-col text-center space-y-2 sm:space-y-5"
       >
         <h2 class="font-bold text-xl xl:text-3xl">Ideation</h2>
         <p class="text-sm sm:text-base">
@@ -65,7 +65,7 @@
         </p>
       </div>
       <div
-        class="w-full sm:w-1/4 px-5 sm:px-10 flex flex-col text-center space-y-2 sm:space-y-5"
+        class="w-full sm:w-1/4 px-5 sm:px-5 flex flex-col text-center space-y-2 sm:space-y-5"
       >
         <h2 class="font-bold text-xl xl:text-3xl">Delivery</h2>
         <p class="text-sm sm:text-base">

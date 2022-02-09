@@ -23,7 +23,7 @@
   <ParallaxLayer rate={0.35}>
     <div class="flex w-full h-full justify-center items-end">
       <div
-        class="flex w-full max-w-[400px] sm:max-w-[800px] xl:max-w-[1100px] h-3/4 flex-col items-center justify-center xl:p-24 sm:p-8 p-2"
+        class="flex w-full max-w-[400px] sm:max-w-[800px] xl:max-w-[1100px] h-[65%] flex-col items-center justify-center xl:p-24 sm:p-8 p-2"
       >
         <div
           class="flex p-2.5 sm:p-6 xl:p-10 space-x-5 sm:space-x-10 xl:space-x-20 items-center"
