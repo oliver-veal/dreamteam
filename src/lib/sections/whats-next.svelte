@@ -1,4 +1,7 @@
-<section class="w-full flex flex-col p-10 space-y-24 lg:space-y-48 pb-48">
+<section
+  class="w-full flex flex-col p-10 space-y-24 lg:space-y-48 pb-48"
+  id="whats-next"
+>
   <h1 class="w-full text-center text-3xl lg:text-6xl uppercase">What's Next</h1>
 
   <div class="flex w-full h-full justify-center items-end">

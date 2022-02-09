@@ -7,7 +7,7 @@
     rate={0.2}
     style="display: flex; align-items: center; justify-content: center;"
   >
-    <div class="flex w-full h-full items-center justify-center">
+    <div id="who-we-are" class="flex w-full h-full items-center justify-center">
       <h1 class="text-5xl uppercase font-light text-center flex flex-col px-32">
         We are dream team
       </h1>

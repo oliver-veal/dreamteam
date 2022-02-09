@@ -3,7 +3,10 @@
   import Plus from '$lib/icon/heroicons/Plus.js';
 </script>
 
-<section class="w-full flex flex-col md:flex-row items-center p-5 space-y-24">
+<section
+  class="w-full flex flex-col md:flex-row items-center p-5 space-y-24"
+  id="what-we-do"
+>
   <h1 class="w-full text-center text-3xl lg:text-6xl uppercase font-light">
     What we do
   </h1>

@@ -1,4 +1,7 @@
-<section class="w-full flex flex-col p-10 space-y-24 lg:space-y-72">
+<section
+  class="w-full flex flex-col p-10 space-y-24 lg:space-y-72"
+  id="how-we-do-it"
+>
   <h1 class="w-full text-center text-3xl lg:text-6xl uppercase">
     How we do it
   </h1>

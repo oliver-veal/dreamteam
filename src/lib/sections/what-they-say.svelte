@@ -1,4 +1,7 @@
-<section class="w-full flex flex-col lg:flex-row items-center space-y-24 p-10">
+<section
+  class="w-full flex flex-col lg:flex-row items-center space-y-24 p-10"
+  id="what-they-say"
+>
   <h1 class="w-full text-center text-3xl lg:text-6xl uppercase font-light">
     What they say
   </h1>

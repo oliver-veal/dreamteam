@@ -3,6 +3,14 @@
 
   import { slide, fly, scale } from 'svelte/transition';
 
+  import { scrollto } from 'svelte-scrollto';
+
+  import * as animateScroll from 'svelte-scrollto';
+
+  animateScroll.setGlobalOptions({
+    offset: -200,
+  });
+
   import Menu from '$lib/logo/menu.svelte';
   import Hero from '$lib/sections/hero.svelte';
   import WhatWeveMade from '$lib/sections/what-weve-made.svelte';
@@ -14,7 +22,7 @@
   import Mask from '$lib/projects/mask.svelte';
   // import Manifesto from '$lib/sections/manifesto.svelte';
 
-  let menuOpen = true;
+  let menuOpen = false;
   let maskOpen = false;
 </script>
 
@@ -47,31 +55,40 @@
     transition:slide
     class="w-screen h-screen fixed inset-0 overflow-y-auto bg-black z-30 flex flex-col items-center justify-center space-y-12"
   >
-    <button>
+    <button use:scrollto={'#who-we-are'} on:click={() => (menuOpen = false)}>
       <h1 class="text-3xl uppercase font-light group-hover:pl-12">
         Who we are
       </h1>
     </button>
 
-    <button>
+    <button use:scrollto={'#what-we-do'} on:click={() => (menuOpen = false)}>
       <h1 class="text-3xl uppercase font-light group-hover:pl-12">
         What we do
       </h1>
     </button>
 
-    <button>
+    <button
+      use:scrollto={'#what-weve-made'}
+      on:click={() => (menuOpen = false)}
+    >
       <h1 class="text-3xl uppercase font-light group-hover:pl-12">
         What we've made
       </h1>
     </button>
 
-    <button>
+    <button use:scrollto={'#how-we-do-it'} on:click={() => (menuOpen = false)}>
+      <h1 class="text-3xl uppercase font-light group-hover:pl-12">
+        How we do it
+      </h1>
+    </button>
+
+    <button use:scrollto={'#what-they-say'} on:click={() => (menuOpen = false)}>
       <h1 class="text-3xl uppercase font-light group-hover:pl-12">
         What they say
       </h1>
     </button>
 
-    <button>
+    <button use:scrollto={'#whats-next'} on:click={() => (menuOpen = false)}>
       <h1 class="text-3xl uppercase font-light group-hover:pl-12">
         What's next
       </h1>
