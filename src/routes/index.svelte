@@ -18,7 +18,7 @@
   <title> Dreamteam </title>
 </head>
 
-<div class="w-full h-0 fixed inset-0 flex flex-col justify-between z-50">
+<div class="w-full h-0 fixed inset-0 flex flex-col justify-between z-40">
   <div
     class="flex items-center justify-between bg-black bg-opacity-75 backdrop-blur-lg p-2.5 md:p-5"
   >
@@ -54,8 +54,8 @@
 </main>
 
 <footer
-  class="px-12 p-24 lg:p-48 flex flex-col sm:flex-row space-y-12 sm:space-y-0 justify-between items-center"
-  style="background: linear-gradient(-20deg, rgb(5,255,241) 25%, rgb(255,84,112) 75%; z-index: 60;"
+  class="px-12 p-24 lg:p-48 flex flex-col sm:flex-row space-y-12 sm:space-y-0 justify-between items-center z-50"
+  style="background: linear-gradient(-20deg, rgb(5,255,241) 25%, rgb(255,84,112) 75%);"
 >
   <div class="flex flex-col sm:space-y-2">
     <b class="uppercase font-bold">Contact</b>

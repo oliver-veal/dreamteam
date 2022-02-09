@@ -15,7 +15,7 @@
       <div
         class="relative h-[404px] w-[192px]"
         style="
-            background: linear-gradient(-20deg, rgb(5,255,241) 25%, rgb(255,84,112) 75%;
+            background: linear-gradient(-20deg, rgb(5,255,241) 25%, rgb(255,84,112) 75%);
             clip-path: url(#wwd-clip);
           "
       >
