@@ -2,10 +2,14 @@
   import Icon from '$lib/icon/Icon.svelte';
   import Plus from '$lib/icon/heroicons/Plus.js';
 
-  import { Parallax, ParallaxLayer } from 'svelte-parallax';
+  import { Parallax, ParallaxLayer } from '$lib/svelte-parallax/index';
 </script>
 
-<Parallax sections={1} threshold={{ top: 0 }} style="background-color: black;">
+<Parallax
+  sections={1}
+  threshold={{ top: 0, bottom: 1 }}
+  style="background-color: black;"
+>
   <ParallaxLayer rate={0.15}>
     <div class="flex w-full h-full justify-start items-start">
       <div
