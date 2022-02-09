@@ -75,7 +75,7 @@
   function setDimensions() {
     // set height here for edge case with more than one Parallax on page
     container.style.height = `${outerHeight * sections}px`;
-    $top = container.getBoundingClientRect().top; // + window.pageYOffset;
+    $top = container.getBoundingClientRect().top + window.pageYOffset;
   }
 
   export function scrollTo(
@@ -104,11 +104,7 @@
   }
 </script>
 
-<svelte:window
-  bind:scrollY={$y}
-  bind:outerHeight
-  on:resize={() => setTimeout(setDimensions, 0)}
-/>
+<svelte:window bind:scrollY={$y} bind:outerHeight />
 
 <div class="parallax-container" bind:this={container} {style}>
   <slot />
