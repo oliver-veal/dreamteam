@@ -3,15 +3,15 @@
 </script>
 
 <Parallax
-  sections={1}
-  threshold={{ top: 0, bottom: 1 }}
+  sections={1.1}
+  threshold={{ top: 0, bottom: 0 }}
   style="background-color: black;"
 >
   <ParallaxLayer
     rate={0.1}
     style="display: flex; align-items: start; justify-content: start;"
   >
-    <div class="flex w-full h-[40%] justify-center items-center">
+    <div class="flex w-full  h-[25%] xl:h-[40%] justify-center items-center">
       <div class="flex flex-col text-center">
         <h1 class="text-3xl xl:text-6xl uppercase">How we do it</h1>
       </div>
@@ -22,28 +22,8 @@
     rate={0.2}
     style="display: flex; flex-direction: column; align-items: start; justify-content: start;"
   >
-    <div class="flex w-full h-[40%] items-end justify-center">
-      <div class="relative w-[971px]">
-        <div
-          class="absolute inset-0 h-[86px] w-[971px]"
-          style="
-          background: linear-gradient(-20deg, rgba(255,188,85,1) 0%, rgba(223,0,56,1) 50%, rgba(158,65,208,1) 100%;
-          clip-path: url(#hwdi-clip);
-        "
-        />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 955 70"
-          class="absolute left-[8px] top-[8px] h-[70px] w-[955px]"
-        >
-          <g>
-            <circle cx="35" cy="35" r="35" />
-            <circle cx="330" cy="35" r="35" />
-            <circle cx="625" cy="35" r="35" />
-            <circle cx="920" cy="35" r="35" />
-          </g>
-        </svg>
-      </div>
+    <div class="flex w-full h-[30%] sm:h-[40%] items-end justify-center px-5">
+      <img src="/hwdi/nodes.png" alt="How we do it" />
     </div>
   </ParallaxLayer>
 
@@ -51,37 +31,44 @@
     rate={0.3}
     style="display: flex; align-items: end; justify-content: center;"
   >
-    <div class="w-[1200px] h-[40%] flex justify-between items-start">
-      <div class="w-1/4 px-10 flex flex-col text-center space-y-5">
+    <div
+      class="w-[1200px] h-[60%] sm:h-[40%] flex flex-col sm:flex-row justify-start sm:justify-between items-start space-y-5 sm:space-y-0"
+    >
+      <div
+        class="w-full sm:w-1/4 px-5 sm:px-10 flex flex-col text-center space-y-2 sm:space-y-5"
+      >
         <h2 class="font-bold text-xl xl:text-3xl">Brief</h2>
-        <p>
+        <p class="text-sm sm:text-base">
           You tell us what the challenge is, what you need and why. If you don't
           know the details yet, we can help you define the brief so we know what
           we're aiming to deliver.
         </p>
       </div>
-      <div class="w-1/4 px-10 flex flex-col text-center space-y-5">
+      <div
+        class="w-full sm:w-1/4 px-5 sm:px-10 flex flex-col text-center space-y-2 sm:space-y-5"
+      >
         <h2 class="font-bold text-xl xl:text-3xl">Discover</h2>
-        <p>
+        <p class="text-sm sm:text-base">
           Working with you, we scope out the challenge. Through methods like
-          desk research, user research, interviews and market research, we
-          identify what the challenge context is, helping us to identify and
-          prioritise the specific challenges we need to solve and the key
-          directions we need to explore.
+          desk, user and market research, we identify context, helping us to
+          prioritise solutions and the key directions we need to explore.
         </p>
       </div>
-      <div class="w-1/4 px-10 flex flex-col text-center space-y-5">
+      <div
+        class="w-full sm:w-1/4 px-5 sm:px-10 flex flex-col text-center space-y-2 sm:space-y-5"
+      >
         <h2 class="font-bold text-xl xl:text-3xl">Ideation</h2>
-        <p>
+        <p class="text-sm sm:text-base">
           We identify potential solutions, illustrating and prototyping the
-          possibilities in an iterative and collaborative process with you. We
-          test our ideas where necessary to ensure we're confident that we have
-          an effective solution.
+          possibilities in an iterative and collaborative process. We test ideas
+          to ensure confidence in an effective solution.
         </p>
       </div>
-      <div class="w-1/4 px-10 flex flex-col text-center space-y-5">
+      <div
+        class="w-full sm:w-1/4 px-5 sm:px-10 flex flex-col text-center space-y-2 sm:space-y-5"
+      >
         <h2 class="font-bold text-xl xl:text-3xl">Delivery</h2>
-        <p>
+        <p class="text-sm sm:text-base">
           We deliver the outcomes as required by the brief. The exact formula
           for what we deliver and how we deliver it depends on the initial
           challenge, but we work closely with you to deliver the solution that

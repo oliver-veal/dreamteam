@@ -4,7 +4,7 @@
 
 <Parallax
   sections={1}
-  threshold={{ top: 0, bottom: 1 }}
+  threshold={{ top: 0, bottom: 0 }}
   style="background-color: black;"
 >
   <ParallaxLayer rate={0.15}>
