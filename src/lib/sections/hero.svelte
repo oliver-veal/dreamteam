@@ -8,7 +8,7 @@
 <section class="relative w-full h-screen flex flex-col p-5 space-y-12">
   <div class="w-full h-full absolute inset-0 flex items-center justify-center">
     <h1
-      class="text-3xl xl:text-6xl uppercase font-light text-center px-8 xl:px-16"
+      class="text-3xl lg:text-6xl uppercase font-light text-center px-8 lg:px-16"
     >
       <span in:fade={{ duration: 1000, delay: 0 }}>
         Design is more than beauty.<br />

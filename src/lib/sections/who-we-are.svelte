@@ -2,11 +2,7 @@
   import { Parallax, ParallaxLayer } from '$lib/svelte-parallax/index';
 </script>
 
-<Parallax
-  sections={1}
-  threshold={{ top: 0, bottom: 0 }}
-  style="background-color: black;"
->
+<Parallax sections={1} threshold={{ top: 0, bottom: 0 }}>
   <ParallaxLayer
     rate={0.2}
     style="display: flex; align-items: center; justify-content: center;"

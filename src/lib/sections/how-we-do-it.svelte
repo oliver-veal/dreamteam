@@ -1,5 +1,5 @@
-<section class="w-full flex flex-col p-10 space-y-24">
-  <h1 class="w-full text-center text-3xl xl:text-6xl uppercase">
+<section class="w-full flex flex-col p-10 space-y-24 lg:space-y-72">
+  <h1 class="w-full text-center text-3xl lg:text-6xl uppercase">
     How we do it
   </h1>
 
@@ -12,9 +12,9 @@
       class="w-[1200px] h-[60%] sm:h-[40%] flex flex-col sm:flex-row justify-start sm:justify-between items-start space-y-5 sm:space-y-0"
     >
       <div
-        class="w-full sm:w-1/4 flex flex-col text-center space-y-2 sm:space-y-5"
+        class="w-full sm:w-1/4 flex flex-col text-center space-y-2 sm:space-y-5 sm:px-2.5 lg:px-10"
       >
-        <h2 class="font-bold text-xl xl:text-3xl">Brief</h2>
+        <h2 class="font-bold text-xl lg:text-3xl">Brief</h2>
         <p class="text-sm sm:text-base">
           You tell us what the challenge is, what you need and why. If you don't
           know the details yet, we can help you define the brief so we know what
@@ -22,9 +22,9 @@
         </p>
       </div>
       <div
-        class="w-full sm:w-1/4 flex flex-col text-center space-y-2 sm:space-y-5"
+        class="w-full sm:w-1/4 flex flex-col text-center space-y-2 sm:space-y-5 sm:px-2.5 lg:px-10"
       >
-        <h2 class="font-bold text-xl xl:text-3xl">Discover</h2>
+        <h2 class="font-bold text-xl lg:text-3xl">Discover</h2>
         <p class="text-sm sm:text-base">
           Working with you, we scope out the challenge. Through methods like
           desk, user and market research, we identify context, helping us to
@@ -32,9 +32,9 @@
         </p>
       </div>
       <div
-        class="w-full sm:w-1/4 flex flex-col text-center space-y-2 sm:space-y-5"
+        class="w-full sm:w-1/4 flex flex-col text-center space-y-2 sm:space-y-5 sm:px-2.5 lg:px-10"
       >
-        <h2 class="font-bold text-xl xl:text-3xl">Ideation</h2>
+        <h2 class="font-bold text-xl lg:text-3xl">Ideation</h2>
         <p class="text-sm sm:text-base">
           We identify potential solutions, illustrating and prototyping the
           possibilities in an iterative and collaborative process. We test ideas
@@ -42,9 +42,9 @@
         </p>
       </div>
       <div
-        class="w-full sm:w-1/4 flex flex-col text-center space-y-2 sm:space-y-5"
+        class="w-full sm:w-1/4 flex flex-col text-center space-y-2 sm:space-y-5 sm:px-2.5 lg:px-10"
       >
-        <h2 class="font-bold text-xl xl:text-3xl">Delivery</h2>
+        <h2 class="font-bold text-xl lg:text-3xl">Delivery</h2>
         <p class="text-sm sm:text-base">
           We deliver the outcomes as required by the brief. The exact formula
           for what we deliver and how we deliver it depends on the initial

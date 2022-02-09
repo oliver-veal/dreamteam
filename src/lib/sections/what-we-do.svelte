@@ -3,14 +3,14 @@
   import Plus from '$lib/icon/heroicons/Plus.js';
 </script>
 
-<section class="w-full flex flex-col p-5 space-y-24">
-  <h1 class="w-full text-center text-3xl xl:text-6xl uppercase font-light">
+<section class="w-full flex flex-col md:flex-row items-center p-5 space-y-24">
+  <h1 class="w-full text-center text-3xl lg:text-6xl uppercase font-light">
     What we do
   </h1>
 
   <div class="flex w-full h-full justify-center items-center">
     <div
-      class="flex w-full sm:w-1/2 h-3/4 sm:h-full items-center justify-center z-50"
+      class="flex w-full sm:w-1/2 h-3/4 sm:h-full items-center justify-center"
     >
       <div
         class="relative h-[404px] w-[192px]"
