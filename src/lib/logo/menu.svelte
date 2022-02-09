@@ -1,12 +1,31 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 20.07 19.07"
-  {...$$restProps}
->
-  <g>
-    <path d="M5,4.87A2.9,2.9,0,1,0,.93,5,2.9,2.9,0,0,0,5,4.87Z" />
-    <path d="M15,14.2a2.9,2.9,0,1,0,4.1-.16A2.91,2.91,0,0,0,15,14.2Z" />
-    <path d="M.77,14.2A2.9,2.9,0,1,0,4.87,14,2.9,2.9,0,0,0,.77,14.2Z" />
-    <path d="M15,.93a2.9,2.9,0,1,0,4.1-.16A2.91,2.91,0,0,0,15,.93Z" />
-  </g>
+<script lang="ts">
+  import { draw } from 'svelte/transition';
+
+  export let open = false;
+</script>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" {...$$restProps}>
+  {#if open}
+    <path
+      transition:draw={{ duration: 300 }}
+      d="M 2.5 2.5 L 17.5 17.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="5"
+      stroke="#fff"
+    />
+    <path
+      transition:draw={{ duration: 300 }}
+      d="M 17.5 2.5 L 2.5 17.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="5"
+      stroke="#fff"
+    />
+  {/if}
+
+  <circle cx="2.5" cy="2.5" r="2.5" />
+  <circle cx="17.5" cy="2.5" r="2.5" />
+  <circle cx="2.5" cy="17.5" r="2.5" />
+  <circle cx="17.5" cy="17.5" r="2.5" />
 </svg>

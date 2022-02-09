@@ -1,6 +1,8 @@
 <script lang="ts">
   // import Button from '$lib/button/Button.svelte';
 
+  import { slide, fly, scale } from 'svelte/transition';
+
   import Menu from '$lib/logo/menu.svelte';
   import Hero from '$lib/sections/hero.svelte';
   import WhatWeveMade from '$lib/sections/what-weve-made.svelte';
@@ -9,9 +11,11 @@
   import WhatsNext from '$lib/sections/whats-next.svelte';
   import WhatWeDo from '$lib/sections/what-we-do.svelte';
   import WhoWeAre from '$lib/sections/who-we-are.svelte';
+  import Mask from '$lib/projects/mask.svelte';
   // import Manifesto from '$lib/sections/manifesto.svelte';
 
-  let menuOpen = false;
+  let menuOpen = true;
+  let maskOpen = false;
 </script>
 
 <head>
@@ -27,8 +31,9 @@
     </h1>
     <button on:click={() => (menuOpen = !menuOpen)} class="p-2">
       <Menu
+        bind:open={menuOpen}
         class="w-6 lg:w-8 {menuOpen &&
-          'rotate-90'} transition-transform duration-300"
+          '-rotate-90'} transition-transform duration-300"
         fill="#fff"
       />
     </button>
@@ -36,6 +41,52 @@
 </div>
 
 <!-- <Manifesto /> -->
+
+{#if menuOpen}
+  <div
+    transition:slide
+    class="w-screen h-screen fixed inset-0 overflow-y-auto bg-black z-30 flex flex-col items-center justify-center space-y-12"
+  >
+    <button>
+      <h1 class="text-3xl uppercase font-light group-hover:pl-12">
+        Who we are
+      </h1>
+    </button>
+
+    <button>
+      <h1 class="text-3xl uppercase font-light group-hover:pl-12">
+        What we do
+      </h1>
+    </button>
+
+    <button>
+      <h1 class="text-3xl uppercase font-light group-hover:pl-12">
+        What we've made
+      </h1>
+    </button>
+
+    <button>
+      <h1 class="text-3xl uppercase font-light group-hover:pl-12">
+        What they say
+      </h1>
+    </button>
+
+    <button>
+      <h1 class="text-3xl uppercase font-light group-hover:pl-12">
+        What's next
+      </h1>
+    </button>
+  </div>
+{/if}
+
+{#if maskOpen}
+  <div
+    transition:scale
+    class="w-screen h-screen fixed inset-0 overflow-y-auto bg-black z-50"
+  >
+    <Mask bind:open={maskOpen} />
+  </div>
+{/if}
 
 <main class="space-y-48 lg:space-y-96">
   <Hero />

@@ -1,33 +1,29 @@
 <script lang="ts">
-  import Menu from '$lib/logo/menu.svelte';
+  import ArrowLeft from '$lib/icon/heroicons/ArrowLeft.js';
+  import X from '$lib/icon/heroicons/X.js';
+
+  import Icon from '$lib/icon/Icon.svelte';
+
+  export let open = false;
 </script>
 
-<head>
-  <title> Dreamteam </title>
-</head>
-
-<div
-  class="w-full h-full p-10 fixed inset-0 flex flex-col justify-start z-50 pointer-events-none"
->
-  <div class="flex items-center justify-between">
-    <h1 class="text-5xl">
-      dream<span class="font-light">team</span>
-    </h1>
-    <Menu width="30" fill="#fff" />
-  </div>
+<div class="w-full fixed flex items-center justify-end z-40">
+  <button on:click={() => (open = false)} class="p-2.5 md:p-5">
+    <Icon src={X} class="w-12 lg:w-14" />
+  </button>
 </div>
 
 <div
-  class="min-w-full min-h-full flex p-10 bg-black items-center justify-center"
+  class="min-w-full min-h-full flex p-10 bg-black items-center justify-center mt-4 lg:mt-0"
 >
   <div
-    class="flex flex-col xl:flex-row space-y-10 xl:space-y-0 xl:space-x-10 items-center justify-center"
+    class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-10 items-center justify-center"
   >
-    <div class="relative xl:ml-24 mt-12 xl:mt-0">
+    <div class="relative lg:ml-24 mt-12 lg:mt-0">
       <img
         src="/projects/mask/facemask.svg"
         alt="Face Mask Project Logo"
-        class="absolute inset-0 w-48 xl:w-72 xl:-translate-x-1/2 -translate-x-[5%] -translate-y-1/4"
+        class="absolute inset-0 w-48 lg:w-72 lg:-translate-x-1/3 -translate-x-[5%] -translate-y-1/4"
       />
       <img
         src="/projects/mask/facemask.png"
@@ -36,10 +32,10 @@
       />
     </div>
     <div
-      class="flex flex-col space-y-5 max-w-[600px] xl:px-0 xl:max-w-[400px] h-full justify-center"
+      class="flex flex-col space-y-5 max-w-[600px] lg:px-0 lg:max-w-[400px] h-full justify-center"
     >
       <div class="flex flex-col space-y-2.5">
-        <h2 class="text-2xl">Design</h2>
+        <h2 class="text-4xl">Design</h2>
         <q class="text-xs">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
           nonummy
@@ -49,7 +45,7 @@
       <div class="flex flex-col space-y-5">
         <h3 class="text-lg">Brief</h3>
         <p class="text-justify text-sm">
-          To find new ways to make stydents feed safe and at gome when they
+          To find new ways to make students feel safe and at home when they
           arrive at Imperial admist the COVID-19 pandemic.
         </p>
         <h3 class="text-lg">Impact</h3>
