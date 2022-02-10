@@ -4,7 +4,7 @@
   import Icon from '$lib/icon/Icon.svelte';
   import X from '$lib/icon/heroicons/X.js';
 
-  let maskOpen = true;
+  let maskOpen = false;
 </script>
 
 <section

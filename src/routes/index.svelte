@@ -23,6 +23,7 @@
   import ChevronDown from '$lib/icon/heroicons/ChevronDown.js';
   import Button from '$lib/button/Button.svelte';
   import { Parallax, ParallaxLayer } from '$lib/svelte-parallax/index';
+  import Bmx from '$lib/projects/bmx.svelte';
 
   let panelOpen = false;
   let panelContent = 'menu';
@@ -36,7 +37,7 @@
 
 <div class="w-full h-0 fixed inset-0 flex flex-col justify-between z-50">
   <div
-    class="flex items-center justify-between bg-black bg-opacity-75 backdrop-blur-lg p-2.5 md:p-5"
+    class="flex items-center justify-between bg-black bg-opacity-75 backdrop-blur-xl p-2.5 md:p-5"
   >
     <h1 class="text-3xl xl:text-5xl select-none">
       dream<span class="font-light">team</span>
@@ -61,7 +62,7 @@
 {#if panelOpen && panelContent === 'mask'}
   <div
     transition:fade
-    class="fixed inset-0 w-screen h-screen bg-black bg-opacity-50 backdrop-blur-3xl z-20 overflow-y-auto"
+    class="fixed inset-0 w-screen h-screen bg-black bg-opacity-75 backdrop-blur-xl z-20 overflow-y-auto"
   >
     <div class="min-h-screen flex flex-col justify-center items-center pt-16">
       <div transition:fade>
@@ -71,10 +72,23 @@
   </div>
 {/if}
 
+{#if panelOpen && panelContent === 'bmx'}
+  <div
+    transition:fade
+    class="fixed inset-0 w-screen h-screen bg-black bg-opacity-75 backdrop-blur-xl z-20 overflow-y-auto"
+  >
+    <div class="min-h-screen flex flex-col justify-center items-center pt-16">
+      <div transition:fade>
+        <Bmx />
+      </div>
+    </div>
+  </div>
+{/if}
+
 {#if panelOpen && panelContent === 'menu'}
   <div
     transition:slide
-    class="w-screen h-screen fixed inset-0 overflow-y-auto bg-black bg-opacity-50 backdrop-blur-3xl flex flex-col items-center justify-center z-40"
+    class="w-screen h-screen fixed inset-0 overflow-y-auto bg-black bg-opacity-75 backdrop-blur-xl flex flex-col items-center justify-center z-40"
   >
     <button on:click={closeMenu} use:scrollto={'#what-we-do'} class="p-5">
       <h1 class="text-3xl uppercase font-light select-none">What we do</h1>
@@ -227,7 +241,13 @@
           <p class="font-bold text-lg">Blast Injury Conference</p>
         </div>
       </div>
-      <div class="relative group cursor-pointer">
+      <button
+        class="relative group cursor-pointer"
+        on:click={() => {
+          panelContent = 'bmx';
+          panelOpen = true;
+        }}
+      >
         <img
           src="/what-weve-made/bmx.png"
           alt="BMX Project"
@@ -237,7 +257,7 @@
           <img src="/wwd/bmx.svg" class="w-10 h-10" alt="BMX" />
           <p class="font-bold text-lg">BMX Project</p>
         </div>
-      </div>
+      </button>
     </div>
   </section>
 
