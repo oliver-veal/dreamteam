@@ -1,12 +1,12 @@
 <section
-  class="w-full flex flex-col p-5 space-y-24 lg:space-y-48"
+  class="w-full flex flex-col p-5 space-y-24 xl:space-y-48"
   id="what-weve-made"
 >
   <div class="w-full text-center">
-    <h1 class="text-3xl lg:text-6xl  uppercase font-light pt-32">
+    <h1 class="text-3xl xl:text-6xl  uppercase font-light pt-32">
       What we've made
     </h1>
-    <p class="lg:text-2xl">A small glimpse at our work</p>
+    <p class="xl:text-2xl">A small glimpse at our work</p>
   </div>
 
   <div

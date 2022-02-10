@@ -4,15 +4,16 @@
   import { OnMount } from 'fractils';
 
   import { fade, fly } from 'svelte/transition';
+  import Button from '$lib/button/Button.svelte';
 </script>
 
 <OnMount>
-  <section class="relative w-full h-screen flex flex-col p-5 space-y-12">
+  <section class="relative w-full h-screen flex flex-col space-y-12">
     <div
       class="w-full h-full absolute inset-0 flex items-center justify-center"
     >
       <h1
-        class="text-3xl lg:text-6xl uppercase font-light text-center px-8 lg:px-16"
+        class="text-3xl xl:text-6xl uppercase font-light text-center px-8 xl:px-16"
       >
         <span in:fade={{ duration: 1000, delay: 0 }}>
           Design is more than beauty.<br />
@@ -24,10 +25,26 @@
     </div>
 
     <div
-      class="text-white absolute top-3/4 left-1/2 -translate-y-1/2 -translate-x-1/2"
+      class="text-white absolute top-[66%] left-1/2 -translate-y-1/2 -translate-x-1/2"
       in:fly={{ y: 150, duration: 1500, delay: 3000 }}
     >
       <Icon src={ChevronDown} size="36" />
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full py-5">
+      <div class="flex items-end justify-between px-8 xl:px-16">
+        <img
+          src="/imperial-logo.png"
+          class="w-[200px]"
+          alt="Imperial College London Consultants"
+        />
+
+        <div class="pointer-events-auto">
+          <a href="mailto:contact@dreamteamdesign.co.uk">
+            <Button>Contact</Button>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 </OnMount>
