@@ -6,17 +6,15 @@
   import * as animateScroll from 'svelte-scrollto';
 
   animateScroll.setGlobalOptions({
-    offset: -200,
+    offset: -50,
   });
 
   import Menu from '$lib/logo/menu.svelte';
-  import Hero from '$lib/sections/hero.svelte';
   import WhatWeveMade from '$lib/sections/what-weve-made.svelte';
   import HowWeDoIt from '$lib/sections/how-we-do-it.svelte';
   import WhatTheySay from '$lib/sections/what-they-say.svelte';
   import WhatsNext from '$lib/sections/whats-next.svelte';
   import WhatWeDo from '$lib/sections/what-we-do.svelte';
-  import WhoWeAre from '$lib/sections/who-we-are.svelte';
   import Mask from '$lib/projects/mask.svelte';
   import { OnMount } from 'fractils';
 
@@ -26,14 +24,15 @@
   import { Parallax, ParallaxLayer } from '$lib/svelte-parallax/index';
 
   let menuOpen = false;
-  let maskOpen = false;
+
+  let closeMenu = () => (menuOpen = false);
 </script>
 
 <head>
   <title> Dreamteam </title>
 </head>
 
-<div class="w-full h-0 fixed inset-0 flex flex-col justify-between z-40">
+<div class="w-full h-0 fixed inset-0 flex flex-col justify-between z-50">
   <div
     class="flex items-center justify-between bg-black bg-opacity-75 backdrop-blur-lg p-2.5 md:p-5"
   >
@@ -54,55 +53,27 @@
 {#if menuOpen}
   <div
     transition:slide
-    class="w-screen h-screen fixed inset-0 overflow-y-auto bg-black z-30 flex flex-col items-center justify-center space-y-12"
+    class="w-screen h-screen fixed inset-0 overflow-y-auto bg-black flex flex-col items-center justify-center z-40"
   >
-    <button use:scrollto={'#who-we-are'} on:click={() => (menuOpen = false)}>
-      <h1 class="text-3xl uppercase font-light group-hover:pl-12">
-        Who we are
-      </h1>
+    <button use:scrollto={'#what-we-do'} on:click={closeMenu} class="p-5">
+      <h1 class="text-3xl uppercase font-light select-none">What we do</h1>
     </button>
 
-    <button use:scrollto={'#what-we-do'} on:click={() => (menuOpen = false)}>
-      <h1 class="text-3xl uppercase font-light group-hover:pl-12">
-        What we do
-      </h1>
+    <button use:scrollto={'#what-weve-made'} on:click={closeMenu} class="p-5">
+      <h1 class="text-3xl uppercase font-light select-none">What we've made</h1>
     </button>
 
-    <button
-      use:scrollto={'#what-weve-made'}
-      on:click={() => (menuOpen = false)}
-    >
-      <h1 class="text-3xl uppercase font-light group-hover:pl-12">
-        What we've made
-      </h1>
+    <button use:scrollto={'#how-we-do-it'} on:click={closeMenu} class="p-5">
+      <h1 class="text-3xl uppercase font-light select-none">How we do it</h1>
     </button>
 
-    <button use:scrollto={'#how-we-do-it'} on:click={() => (menuOpen = false)}>
-      <h1 class="text-3xl uppercase font-light group-hover:pl-12">
-        How we do it
-      </h1>
+    <button use:scrollto={'#what-they-say'} on:click={closeMenu} class="p-5">
+      <h1 class="text-3xl uppercase font-light select-none">What they say</h1>
     </button>
 
-    <button use:scrollto={'#what-they-say'} on:click={() => (menuOpen = false)}>
-      <h1 class="text-3xl uppercase font-light group-hover:pl-12">
-        What they say
-      </h1>
+    <button use:scrollto={'#whats-next'} on:click={closeMenu} class="p-5">
+      <h1 class="text-3xl uppercase font-light select-none">What's next</h1>
     </button>
-
-    <button use:scrollto={'#whats-next'} on:click={() => (menuOpen = false)}>
-      <h1 class="text-3xl uppercase font-light group-hover:pl-12">
-        What's next
-      </h1>
-    </button>
-  </div>
-{/if}
-
-{#if maskOpen}
-  <div
-    transition:scale
-    class="w-screen h-screen fixed inset-0 overflow-y-auto bg-black z-50"
-  >
-    <Mask bind:open={maskOpen} />
   </div>
 {/if}
 
@@ -136,11 +107,8 @@
         </OnMount>
       </div>
     </ParallaxLayer>
-    <ParallaxLayer offset={1} rate={0.2} style="z-index: 100;">
-      <div
-        id="who-we-are"
-        class="flex flex-col w-full h-full items-center justify-center z-50"
-      >
+    <ParallaxLayer offset={1} rate={0.2} style="z-index: 60;">
+      <div class="flex flex-col w-full h-full items-center justify-center z-30">
         <h1
           class="text-5xl uppercase font-light text-center flex flex-col px-32 select-none"
         >

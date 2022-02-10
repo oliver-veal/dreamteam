@@ -1,25 +1,10 @@
-<script lang="ts">
-  import ArrowLeft from '$lib/icon/heroicons/ArrowLeft.js';
-  import X from '$lib/icon/heroicons/X.js';
-
-  import Icon from '$lib/icon/Icon.svelte';
-
-  export let open = false;
-</script>
-
-<div class="w-full fixed flex items-center justify-end z-40">
-  <button on:click={() => (open = false)} class="p-2.5 md:p-5">
-    <Icon src={X} class="w-12 xl:w-14" />
-  </button>
-</div>
-
 <div
-  class="min-w-full min-h-full flex p-10 bg-black items-center justify-center mt-4 xl:mt-0"
+  class="relative min-w-full flex flex-col px-10 bg-black items-center justify-start mt-4 xl:mt-0"
 >
   <div
     class="flex flex-col xl:flex-row space-y-10 xl:space-y-0 xl:space-x-10 items-center justify-center"
   >
-    <div class="relative xl:ml-24 mt-12 xl:mt-0">
+    <div class="relative  xl:mt-0">
       <img
         src="/projects/mask/facemask.svg"
         alt="Face Mask Project Logo"
