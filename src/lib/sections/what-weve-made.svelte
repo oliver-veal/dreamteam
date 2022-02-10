@@ -4,7 +4,7 @@
   import Icon from '$lib/icon/Icon.svelte';
   import X from '$lib/icon/heroicons/X.js';
 
-  let maskOpen = false;
+  let maskOpen = true;
 </script>
 
 <section
@@ -48,7 +48,7 @@
       <img
         src="/what-weve-made/bmx.png"
         alt="BMX Project"
-        class="w-full max-h-[325px] object-cover group-hover:-translate-y-8 transition-transform duration-300"
+        class="w-full max-h-[325px] object-cover group-hover:-translate-y-8 transition-transform duration-300 select-none"
       />
       <div class="absolute bottom-0 left-0 flex flex-col space-y-2.5 z-10">
         <img src="/wwd/bmx.svg" class="w-10 h-10" alt="BMX" />
@@ -59,19 +59,16 @@
 </section>
 
 {#if maskOpen}
-  <div class="absolute inset-0">
+  <div transition:slide class="fixed inset-0 w-screen h-screen bg-black z-20">
     <div
-      transition:slide
-      class="w-screen h-screen overflow-y-auto fixed inset-0 bg-black flex flex-col justify-center z-20 py-24"
+      class="h-screen  overflow-y-auto flex flex-col justify-center items-center"
     >
-      <div class="w-full h-full flex flex-col justify-center items-center">
-        <button on:click={() => (maskOpen = false)} class="p-2.5 md:p-5">
-          <Icon src={X} class="w-12 xl:w-14" />
-        </button>
-        <div transition:fade>
-          <Mask />
-        </div>
-      </div>
+      <button on:click={() => (maskOpen = false)} class="p-2.5 md:p-5">
+        <Icon src={X} class="w-12 xl:w-14" />
+      </button>
+      <!-- <div transition:fade> -->
+      <Mask />
+      <!-- </div> --->
     </div>
   </div>
 {/if}

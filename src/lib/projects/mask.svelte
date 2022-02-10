@@ -18,10 +18,6 @@
   >
     <div class="flex flex-col space-y-2.5">
       <h2 class="text-4xl">Design</h2>
-      <q class="text-xs">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-        nonummy
-      </q>
     </div>
 
     <div class="flex flex-col space-y-5">

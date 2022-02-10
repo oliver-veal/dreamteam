@@ -1,3 +1,7 @@
+<script lang="ts">
+  import Button from '$lib/button/Button.svelte';
+</script>
+
 <section
   class="w-full flex flex-col p-10 space-y-24 xl:space-y-48 pb-48"
   id="whats-next"
@@ -15,29 +19,38 @@
             <p>UI / UX</p>
             <p>Experience</p>
           </div>
+          <a target="_blank" href="http://butterfly-air.com">
+            <Button>Visit Website</Button>
+          </a>
           <div class="flex flex-col text-right sm:max-w-[60%]">
             <p class="text-sm sm:text-base max-w-[400px]">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-              tation ullamcorper suscipit lobortis nisl
+              When butterflies are present, we know the air is healthy.
+              Butterfly devices measure Indoor Air Quality to an unparalleled
+              level of accuracy and reliability based on our unique patented
+              LaminAIR flow technology.
             </p>
           </div>
         </div>
         <div class="flex flex-col w-1/2 items-start space-y-12">
           <img src="/next/penta.svg" class="w-16 h-16" alt="Penta" />
-          <h2 class="text-2xl">Penta</h2>
+          <h2 class="text-2xl">White City Sculpture</h2>
           <div class="flex flex-col text-left">
-            <p>Logo Design</p>
-            <p>Strategy</p>
-            <p>Website</p>
+            <p>Art</p>
+            <p>Science</p>
+            <p>Challenge</p>
           </div>
+          <a
+            target="_blank"
+            href="https://www.eventbrite.co.uk/e/white-city-sculpture-challenge-2022-registration-259502698557?aff=efbneb"
+          >
+            <Button>Eventbrite</Button>
+          </a>
           <div class="flex flex-col text-left sm:max-w-[60%]">
             <p class="text-sm sm:text-base max-w-[400px]">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-              tation ullamcorper suscipit lobortis nisl
+              Imperial’s first student-led installation challenge is driving
+              synergy between art and science. The 2022 Sculpture Challenge
+              provides a chance for bright and diverse minds to collaborate and
+              bring their vision to reality on the White City Campus.
             </p>
           </div>
         </div>
