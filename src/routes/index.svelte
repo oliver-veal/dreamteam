@@ -39,9 +39,12 @@
   <div
     class="flex items-center justify-between bg-black bg-opacity-75 backdrop-blur-xl p-2.5 md:p-5"
   >
-    <h1 class="text-3xl xl:text-5xl select-none">
-      dream<span class="font-light">team</span>
-    </h1>
+    <!-- <h1 class="text-3xl xl:text-5xl select-none"> -->
+    <!-- dream<span class="font-light">team</span> -->
+    <!-- </h1> -->
+
+    <img src="/dreamteam.svg" alt="dreamteam" width="200" />
+
     <button
       on:click={() => {
         panelOpen = !panelOpen;

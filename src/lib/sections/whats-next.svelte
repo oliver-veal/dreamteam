@@ -33,7 +33,7 @@
         </div>
         <div class="flex flex-col w-1/2 items-start space-y-12">
           <img src="/next/penta.svg" class="w-16 h-16" alt="Penta" />
-          <h2 class="text-2xl">White City Sculpture</h2>
+          <h2 class="text-2xl">Sculpture</h2>
           <div class="flex flex-col text-left">
             <p>Art</p>
             <p>Science</p>
@@ -47,7 +47,7 @@
           </a>
           <div class="flex flex-col text-left sm:max-w-[60%]">
             <p class="text-sm sm:text-base max-w-[400px]">
-              Imperial’s first student-led installation challenge is driving
+              Imperial's first student-led installation challenge is driving
               synergy between art and science. The 2022 Sculpture Challenge
               provides a chance for bright and diverse minds to collaborate and
               bring their vision to reality on the White City Campus.
