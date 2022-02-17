@@ -279,7 +279,9 @@
     <b class="uppercase font-bold">Contact</b>
     <p>DreamTeam London</p>
     <p>South Kensington</p>
-    <p>04 56784900</p>
+    <a href="mailto:contact@dreamteamdesign.co.uk"
+      >contact@dreamteamdesign.co.uk</a
+    >
   </div>
   <p>All Rights Reserved</p>
 </footer>
