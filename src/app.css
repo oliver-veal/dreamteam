@@ -17,3 +17,7 @@
 h1, p {
   font-family: Montserrat, Helvetica, sans-serif;
 }
+
+.btn {
+    @apply py-2 px-8 ring-2 ring-white rounded-full hover:ring-4 focus:ring-4 transition-all focus:outline-none
+}

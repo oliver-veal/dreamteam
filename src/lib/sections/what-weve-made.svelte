@@ -1,10 +1,6 @@
 <script lang="ts">
-  import { slide, fade } from 'svelte/transition';
-  import Mask from '$lib/projects/mask.svelte';
-  import Icon from '$lib/icon/Icon.svelte';
-  import X from '$lib/icon/heroicons/X.js';
-
-  let maskOpen = false;
+  export let panelContent: string;
+  export let panelOpen: boolean;
 </script>
 
 <section
@@ -21,7 +17,10 @@
   >
     <button
       class="relative group cursor-pointer"
-      on:click={() => (maskOpen = true)}
+      on:click={() => {
+        panelContent = 'mask';
+        panelOpen = true;
+      }}
     >
       <img
         src="/what-weve-made/mask.png"
@@ -44,7 +43,13 @@
         <p class="font-bold text-lg">Blast Injury Conference</p>
       </div>
     </div>
-    <div class="relative group cursor-pointer">
+    <button
+      class="relative group cursor-pointer"
+      on:click={() => {
+        panelContent = 'bmx';
+        panelOpen = true;
+      }}
+    >
       <img
         src="/what-weve-made/bmx.png"
         alt="BMX Project"
@@ -54,21 +59,6 @@
         <img src="/wwd/bmx.svg" class="w-10 h-10" alt="BMX" />
         <p class="font-bold text-lg">BMX Project</p>
       </div>
-    </div>
+    </button>
   </div>
 </section>
-
-{#if maskOpen}
-  <div transition:slide class="fixed inset-0 w-screen h-screen bg-black z-20">
-    <div
-      class="h-screen  overflow-y-auto flex flex-col justify-center items-center"
-    >
-      <button on:click={() => (maskOpen = false)} class="p-2.5 md:p-5">
-        <Icon src={X} class="w-12 xl:w-14" />
-      </button>
-      <!-- <div transition:fade> -->
-      <Mask />
-      <!-- </div> --->
-    </div>
-  </div>
-{/if}

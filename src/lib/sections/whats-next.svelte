@@ -19,9 +19,10 @@
             <p>UI / UX</p>
             <p>Experience</p>
           </div>
-          <a target="_blank" href="http://butterfly-air.com">
-            <Button>Visit Website</Button>
+          <a target="_blank" href="http://butterfly-air.com" class="btn">
+            <h1 class="uppercase text-xs xl:text-base">Contact</h1>
           </a>
+
           <div class="flex flex-col text-right sm:max-w-[60%]">
             <p class="text-sm sm:text-base max-w-[400px]">
               When butterflies are present, we know the air is healthy.
@@ -42,8 +43,9 @@
           <a
             target="_blank"
             href="https://www.eventbrite.co.uk/e/white-city-sculpture-challenge-2022-registration-259502698557?aff=efbneb"
+            class="btn"
           >
-            <Button>Eventbrite</Button>
+            <h1 class="uppercase text-xs xl:text-base">Eventbrite</h1>
           </a>
           <div class="flex flex-col text-left sm:max-w-[60%]">
             <p class="text-sm sm:text-base max-w-[400px]">
