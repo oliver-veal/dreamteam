@@ -2,9 +2,7 @@
   class="w-full flex flex-col p-10 space-y-24 xl:space-y-72"
   id="how-we-do-it"
 >
-  <h1 class="w-full text-center text-3xl xl:text-6xl uppercase">
-    How we do it
-  </h1>
+  <h1>How we do it</h1>
 
   <div class="flex w-full items-center justify-center">
     <img src="/hwdi/nodes.png" alt="How we do it" />

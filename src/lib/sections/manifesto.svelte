@@ -1,77 +1,110 @@
-<!-- <svg class="fixed inset-0 w-full h-full">
-  <defs>
-    <clipPath id="clip">
-      <circle cx="50%" cy="75%" r="{s * 100}%" />
-    </clipPath>
-  </defs>
-</svg> -->
+<script lang="ts">
+  import { OnMount } from 'fractils';
+  import { fly, fade } from 'svelte/transition';
+  import { spring } from 'svelte/motion';
 
-<!-- <div class="w-full">
+  let manifesto = spring(0, {
+    stiffness: 0.005,
+    damping: 0.1,
+  });
+
+  let manifesto_open = false;
+
+  $: {
+    if (manifesto_open) manifesto.set(100);
+    else manifesto.set(0);
+  }
+</script>
+
+<div class="relative flex w-full flex-col items-center min-h-screen">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="absolute inset-0 -z-50 w-screen h-screen"
+  >
+    <defs>
+      <clipPath id="manifesto_clip">
+        <circle cx="50%" cy="75%" r={$manifesto + 5 + '%'} />
+      </clipPath>
+    </defs>
+  </svg>
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="absolute inset-0 -z-50 w-screen h-screen"
+  >
+    <defs>
+      <clipPath id="manifesto_button_clip">
+        <circle cx="50%" cy="75%" r={(100 - $manifesto) / 21 + '%'} />
+      </clipPath>
+    </defs>
+  </svg>
+
+  <OnMount>
+    <div class="sticky top-0 left-0 w-full h-screen z-20">
+      <div
+        class="gradient absolute top-0 left-0 w-full h-screen flex items-center justify-center z-30"
+        style="clip-path: url(#manifesto_clip)"
+        in:fly={{ y: 150, duration: 1500, delay: 3000 }}
+      />
+
+      <div
+        class="absolute top-0 left-0 w-full h-full flex items-center justify-center z-30 cursor-pointer"
+        on:click={() => (manifesto_open = !manifesto_open)}
+        style="background: black; clip-path: url(#manifesto_button_clip)"
+        in:fly={{ y: 150, duration: 1500, delay: 3000 }}
+      />
+
+      <div
+        class="absolute left-1/2 top-3/4 -translate-x-1/2 -translate-y-1/2"
+        in:fly={{ y: 250, duration: 1500, delay: 3000 }}
+      >
+        <p class="pt-64 xl:pt-96">Manifesto</p>
+      </div>
+    </div>
+  </OnMount>
+
   <div
-    class="h-screen w-full sticky inset-0 -z-10"
-    style="
-            background: linear-gradient(-45deg, rgba(255,188,85,1) 0%, rgba(223,0,56,1) 50%, rgba(158,65,208,1) 100%;
-            background-position: 0.25;
-            clip-path: url(#clip);
-          "
-  />
-
-  <Parallax sections={2.5} threshold={{ top: 0 }}>
-    <ParallaxLayer
-      rate={0.1}
-      style="display: flex; align-items: center; justify-content: center;"
-    >
-      <h1
-        class="text-4xl uppercase font-light text-center flex flex-col px-32 space-y-16"
-      >
-        <span>We know diversity determines innovative futures.</span>
-        <span>We know design engineering can change the world.</span>
+    class="absolute top-0 flex flex-col w-full h-screen items-center justify-center space-y-8 px-4 xl:px-32"
+  >
+    <OnMount>
+      <h1 class="z-30" in:fade={{ duration: 1000, delay: 0 }}>
+        Design is more than beauty.
       </h1>
-    </ParallaxLayer>
-
-    <ParallaxLayer
-      rate={0.2}
-      offset={0.5}
-      style="display: flex; align-items: center; justify-content: center;"
-    >
-      <h1
-        class="text-4xl uppercase font-light text-center flex flex-col px-32 space-y-16"
-      >
-        <span>
-          We are tomorrow's designers, engineers, makers and thinkers.
-        </span>
-        <span>We think freely; paving new ways of thinking and doing. </span>
+      <h1 class="z-30" in:fade={{ duration: 1000, delay: 1500 }}>
+        Engineering is more than science.
       </h1>
-    </ParallaxLayer>
+    </OnMount>
+  </div>
 
-    <ParallaxLayer
-      rate={0.3}
-      offset={1}
-      style="display: flex; align-items: center; justify-content: center;"
+  {#if manifesto_open}
+    <div
+      class="flex flex-col w-full h-screen items-center justify-center space-y-8 px-4 xl:px-32 z-30"
     >
-      <h1
-        class="text-4xl uppercase font-light text-center flex flex-col px-32 space-y-16"
-      >
-        <span>
-          We engineer the future; incubating tomorrow's change-makers.
-        </span>
-        <span>
-          We are fearlessly optimistic; radical futures need radical action.
-        </span>
-      </h1>
-    </ParallaxLayer>
+      <h1>We know diversity determines innovative futures.</h1>
+      <h1>We know design engineering can change the world.</h1>
+    </div>
 
-    <ParallaxLayer
-      rate={0.4}
-      offset={1.5}
-      style="display: flex; align-items: center; justify-content: center;"
+    <div
+      class="flex flex-col w-full h-screen items-center justify-center space-y-8 px-4 xl:px-32 z-30"
     >
-      <h1
-        class="text-4xl uppercase font-light text-center flex flex-col px-32 space-y-16"
-      >
-        <span>We are defined by innovation.</span>
-        <span>We are defining design engineering. </span>
+      <h1>We are tomorrow's designers, engineers, makers and thinkers.</h1>
+      <h1>We think freely; paving new ways of thinking and doing.</h1>
+    </div>
+
+    <div
+      class="flex flex-col w-full h-screen items-center justify-center space-y-8 px-4 xl:px-32 z-30"
+    >
+      <h1>We engineer the future; incubating tomorrow's change-makers.</h1>
+      <h1>
+        We are fearlessly optimistic; radical futures need radical action.
       </h1>
-    </ParallaxLayer>
-  </Parallax>
-</div> -->
+    </div>
+
+    <div
+      class="flex flex-col w-full h-screen items-center justify-center space-y-8 px-4 xl:px-32 z-30"
+    >
+      <h1>We are defined by innovation.</h1>
+      <h1>We are defining design engineering.</h1>
+    </div>
+  {/if}
+</div>

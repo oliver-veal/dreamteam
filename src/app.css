@@ -18,6 +18,14 @@ h1, p {
   font-family: Montserrat, Helvetica, sans-serif;
 }
 
+h1 {
+    @apply text-3xl xl:text-6xl uppercase font-light text-center px-8 xl:px-16
+}
+
 .btn {
     @apply py-2 px-8 ring-2 ring-white rounded-full hover:ring-4 focus:ring-4 transition-all focus:outline-none
+}
+
+.gradient {
+    background: linear-gradient(-20deg, rgb(5,255,241) 25%, rgb(255,84,112) 75%);
 }
