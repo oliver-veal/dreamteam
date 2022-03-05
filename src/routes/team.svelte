@@ -258,11 +258,12 @@
 
         {#each team as member}
           <div
+            style:background="linear-gradient(180deg,#FF827C,#FF53F6)"
             style:height={selected_team === member
               ? '600px'
               : `${member.offset}px`}
             class="{selected_team === member ||
-              'xl:hover:translate-y-0 hover:translate-y-32'} xl:translate-y-16 translate-y-48 transition-all rounded-t-full bg-[#ff5470] p-1 xl:mx-8 mx-4"
+              'xl:hover:translate-y-0 hover:translate-y-32'} xl:translate-y-16 translate-y-48 transition-all rounded-t-full p-1 xl:mx-8 mx-4"
             on:click={() => (selected_team = member)}
           >
             <div
