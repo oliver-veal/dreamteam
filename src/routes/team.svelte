@@ -183,14 +183,23 @@
 <Menu open={menuOpen} {closeMenu} />
 
 <div
-  class="relative w-full h-screen flex xl:space-x-16 items-center justify-center p-16"
+  class="relative w-full h-screen flex flex-col xl:flex-row xl:space-x-16 items-center justify-center p-16"
 >
-  <h1 class="text-3xl xl:text-8xl uppercase font-light text-right p-4">
-    Who we <br /> are
+  <h1
+    class="text-5xl xl:text-8xl uppercase font-light text-right p-4 xl:max-w-[400px]"
+  >
+    Who we are
   </h1>
-  <h2 class="text-lg xl:text-2xl p-4">
-    We are a collection of creatives, <br /> engineers and innovators.
-  </h2>
+  <div class="flex flex-col max-w-[500px] text-center xl:text-left">
+    <h2 class="text-lg xl:text-2xl p-4">
+      We are a collection of creatives, engineers and innovators.
+    </h2>
+    <h2 class="text-lg xl:text-2xl p-4">
+      We are a student-led professional design consultancy based in Imperial
+      College London, working with the creative leadership of renowned British
+      Engineer and Artist Nick Munro.
+    </h2>
+  </div>
 
   <OnMount>
     <div
