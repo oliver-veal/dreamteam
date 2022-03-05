@@ -1,7 +1,10 @@
 <script lang="ts">
+  import ChevronDown from '$lib/icon/heroicons/ChevronDown.js';
+  import Icon from '$lib/icon/Icon.svelte';
   import Menu from '$lib/menu/Menu.svelte';
   import MenuIcon from '$lib/menu/MenuIcon.svelte';
-  import { MacScrollbar } from 'fractils';
+  import { OnMount } from 'fractils';
+  import { fly } from 'svelte/transition';
 
   let menuOpen = false;
 
@@ -28,9 +31,6 @@
 
   const mouseMoveHandler = (e: MouseEvent) => {
     const dx = e.clientX - pos.x;
-    const dy = e.clientY - pos.y;
-
-    side_scroll.scrollTop = pos.top - dy;
     side_scroll.scrollLeft = pos.left - dx;
   };
 
@@ -41,9 +41,121 @@
     side_scroll.style.cursor = 'grab';
     side_scroll.style.removeProperty('user-select');
   };
-</script>
 
-<MacScrollbar root={side_scroll} disabled={false} />
+  interface Team {
+    img: string;
+    name: string;
+    role: string;
+    blurb: string;
+    skills: string[];
+    offset: number;
+  }
+
+  const getRandomOffset = () => {
+    return 350 + Math.random() * 100;
+  };
+
+  const team = [
+    {
+      img: 'freya_smith',
+      name: 'Freya Smith',
+      role: 'Design Engineer',
+      blurb:
+        'Freya is interested in the fusion of art and creativity with engineering, generating inventive design solutions.',
+      skills: ['Product Design', 'User Experience Design', 'Engineering'],
+      offset: getRandomOffset(),
+    },
+    {
+      img: 'harika',
+      name: 'Harika Adivikolanu',
+      role: 'Experience Designer and Strategist',
+      blurb:
+        'Harika is an experience designer and strategist focused breaking down barriers between humans and emerging technologies. Harika uses a non-intrusive design approach in physical and digital design solutions to enhance wellbeing.',
+      skills: [
+        'UI/UX and Experience Design',
+        'Innovation Strategy',
+        'Human-Centered Research',
+      ],
+      offset: getRandomOffset(),
+    },
+    {
+      img: 'idan',
+      name: 'Idan Gal Shohet',
+      role: 'Branding and Communications',
+      blurb:
+        'Idan combines design, engineering and marketing approaches, ensuring solutions have a powerful identity that reaches, and impacts, the intended audience.',
+      skills: ['Brand Development', 'Communications', 'Graphic design'],
+      offset: getRandomOffset(),
+    },
+    {
+      img: 'jessica_riley',
+      name: 'Jessica Riley',
+      role: 'Interdisciplinary Designer and Researcher & Creative Lead',
+      blurb:
+        'A human-centred designer, researcher and communicator, Jessica tackles complex challenges through a holistic and collaborative approach; effecting meaningful impact through design.',
+      skills: ['User-Centred Design', 'Creative Strategy', 'Content Design'],
+      offset: getRandomOffset(),
+    },
+    {
+      img: 'julian',
+      name: 'Julian Ellis-Brown',
+      role: 'Systems Thinker and Design Engineer',
+      blurb:
+        'With a background in Mechanical Engineering and a double-masters in Innovation Design Engineering, Julian brings together a macro understanding of design which is underscored by a fundamental knowledge of first principles. Having spent time designing innovative new mechanical devices for DreamTeam, Julian is now turning his attention to sustainability through co-founding saltyco®, a materials science start-up focussing on turning the fashion industry planet-positive.',
+      skills: [
+        'Systems Design',
+        'Bio-Based Materials',
+        'Planet-Centred Design',
+      ],
+      offset: getRandomOffset(),
+    },
+    {
+      img: 'leo_planck',
+      name: 'Leo Planck-Prideaux',
+      role: 'Hardware Engineer',
+      blurb:
+        'Leo thrives at the intersection of technology and design. His passion is creating products that achieve their technical potential through elegant design.',
+      skills: [
+        '3D Modelling',
+        'Integrated Circuit Design',
+        'Visualisation and Rendering',
+      ],
+      offset: getRandomOffset(),
+    },
+    {
+      img: 'marco',
+      name: '',
+      role: '',
+      blurb: '',
+      skills: ['', '', ''],
+      offset: getRandomOffset(),
+    },
+    {
+      img: 'martin_lombard',
+      name: 'Martin Lombard',
+      role: 'Design Engineer',
+      blurb:
+        'Martin is a passionate creator with an innovative and disruptive approach to problem-solving. He applies rigorous engineering and design concepts to create aesthetic, attractive and precise systems.',
+      skills: [
+        'Product Design',
+        'Created Content Creation',
+        'Technical Development',
+      ],
+      offset: getRandomOffset(),
+    },
+    {
+      img: 'oscar_leclercq',
+      name: 'Oscar Leclercq',
+      role: 'Design Engineer and Web Designer',
+      blurb:
+        "Oscar focuses on user-centred design and engineering, pushing this approach within the scope of sustainable innovation. Oscar has developed online platforms for Dreamteam including websites and online shops, as well as communicating Dreamteam's work to clients and the public.",
+      skills: ['Communications', 'Web Design', 'Human-Centered Design'],
+      offset: getRandomOffset(),
+    },
+  ];
+
+  let selected_team: Team = team[0];
+</script>
 
 <div class="w-full h-0 fixed inset-0 flex flex-col justify-between z-50">
   <div
@@ -71,37 +183,46 @@
 <Menu open={menuOpen} {closeMenu} />
 
 <div
-  class="w-full h-screen flex space-x-8 items-center justify-center p-16 py-96"
+  class="relative w-full h-screen flex xl:space-x-16 items-center justify-center p-16"
 >
-  <h1 class="text-3xl xl:text-8xl uppercase font-light text-right">
+  <h1 class="text-3xl xl:text-8xl uppercase font-light text-right p-4">
     Who we <br /> are
   </h1>
-  <h2 class="text-lg xl:text-2xl">
+  <h2 class="text-lg xl:text-2xl p-4">
     We are a collection of creatives, <br /> engineers and innovators.
   </h2>
+
+  <OnMount>
+    <div
+      class="absolute left-1/2 top-3/4 -translate-x-1/2 -translate-y-1/2"
+      in:fly={{ y: 150, duration: 1500, delay: 0 }}
+    >
+      <Icon src={ChevronDown} size="24" />
+    </div>
+  </OnMount>
 </div>
 
-<div class="min-h-screen w-full flex flex-col">
+<div class="w-full flex flex-col">
   <div class="flex w-full flex-grow items-center justify-center">
-    <div class="flex w-full max-w-[800px] divide-x py-32">
-      <div class="flex flex-col space-y-8 px-16 items-start">
+    <div
+      class="flex xl:flex-row flex-col w-full xl:max-w-[1000px] max-w-[600px] h-[600px] xl:divide-x divide-y xl:divide-y-0 py-16 items-center justify-center"
+    >
+      <div class="flex flex-col space-y-8 p-16 items-start">
         <div class="flex flex-col">
-          <h2 class="text-lg xl:text-3xl">Idan Gal Sohet</h2>
-          <p>Branding and Communications</p>
+          <h2 class="text-3xl">{selected_team.name}</h2>
+          <p>{selected_team.role}</p>
         </div>
-        <p class="text-lg xl:text-xl text-justify">
-          Idan combines design, engineering and marketing approaches, ensuring
-          solutions have a powerful identity that reaches and impacts the
-          intended audience.
+        <p class="text-xl text-justify">
+          {selected_team.blurb}
         </p>
       </div>
 
       <div
-        class="flex flex-col space-y-8 px-16 items-center justify-center flex-shrink-0"
+        class="flex flex-col space-y-8 p-16 items-center justify-center flex-shrink-0"
       >
-        <h2>Brand Development</h2>
-        <h2>Communications</h2>
-        <h2>Graphic Design</h2>
+        {#each selected_team.skills as skill}
+          <h2>{skill}</h2>
+        {/each}
       </div>
     </div>
   </div>
@@ -109,101 +230,44 @@
   <div
     bind:this={side_scroll}
     on:mousedown={mouseDownHandler}
-    class="w-full overflow-x-auto cursor-grab flex justify-center"
+    class="w-full xl:h-[560px] h-[450px] overflow-y-hidden overflow-x-auto no-scrollbar cursor-grab"
   >
-    <div class="flex flex-col">
-      <div class="flex w-full space-x-16 items-end px-8">
-        <div
-          class="h-96 min-w-[220px] flex-grow w-full flex-1 rounded-t-full bg-[#ff5470] p-1"
-        >
-          <img
-            src="/headshots/webp/freya_smith.webp"
-            alt="Face"
-            class="w-full rounded-full"
-          />
-        </div>
+    <div class="flex w-full h-full">
+      <div class="flex w-full items-end">
+        <div class="p-8" />
 
-        <div
-          class="h-96 min-w-[220px] flex-grow w-full flex-1 rounded-t-full bg-[#ff5470] p-1"
-        >
-          <img
-            src="/headshots/webp/harika.webp"
-            alt="Face"
-            class="w-full rounded-full"
-          />
-        </div>
-
-        <div
-          class="h-96 min-w-[220px] flex-grow w-full flex-1 rounded-t-full bg-[#ff5470] p-1"
-        >
-          <img
-            src="/headshots/webp/idan.webp"
-            alt="Face"
-            class="w-full rounded-full"
-          />
-        </div>
-
-        <div
-          class="h-96 min-w-[220px] flex-grow w-full flex-1 rounded-t-full bg-[#ff5470] p-1"
-        >
-          <img
-            src="/headshots/webp/jessica_riley.webp"
-            alt="Face"
-            class="w-full rounded-full"
-          />
-        </div>
-
-        <div
-          class="h-96 min-w-[220px] flex-grow w-full flex-1 rounded-t-full bg-[#ff5470] p-1"
-        >
-          <img
-            src="/headshots/webp/julian.webp"
-            alt="Face"
-            class="w-full rounded-full"
-          />
-        </div>
-
-        <div
-          class="h-96 min-w-[220px] flex-grow w-full flex-1 rounded-t-full bg-[#ff5470] p-1"
-        >
-          <img
-            src="/headshots/webp/leo_planck.webp"
-            alt="Face"
-            class="w-full rounded-full"
-          />
-        </div>
-
-        <div
-          class="h-96 min-w-[220px] flex-grow w-full flex-1 rounded-t-full bg-[#ff5470] p-1"
-        >
-          <img
-            src="/headshots/webp/marco.webp"
-            alt="Face"
-            class="w-full rounded-full"
-          />
-        </div>
-
-        <div
-          class="h-96 min-w-[220px] flex-grow w-full flex-1 rounded-t-full bg-[#ff5470] p-1"
-        >
-          <img
-            src="/headshots/webp/martin_lombard.webp"
-            alt="Face"
-            class="w-full rounded-full"
-          />
-        </div>
-
-        <div
-          class="h-96 min-w-[220px] flex-grow w-full flex-1 rounded-t-full bg-[#ff5470] p-1"
-        >
-          <img
-            src="/headshots/webp/oscar_leclercq.webp"
-            alt="Face"
-            class="w-full rounded-full"
-          />
-        </div>
+        {#each team as member}
+          <div
+            style:height={selected_team === member
+              ? '600px'
+              : `${member.offset}px`}
+            class="{selected_team === member ||
+              'xl:hover:translate-y-0 hover:translate-y-32'} xl:translate-y-16 translate-y-48 transition-all rounded-t-full bg-[#ff5470] p-1 xl:mx-8 mx-4"
+            on:click={() => (selected_team = member)}
+          >
+            <div
+              style:background="url(/headshots/webp/{member.img}.webp)"
+              style:background-size="cover"
+              alt={member.name}
+              class="xl:w-[200px] w-[150px] xl:h-[200px] h-[150px] rounded-full"
+            />
+          </div>
+        {/each}
+        <div class="p-8" />
       </div>
-      <div class="w-full h-32 bg-[#ff5470]" />
     </div>
   </div>
 </div>
+
+<style>
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>
