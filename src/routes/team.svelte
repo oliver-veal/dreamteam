@@ -157,6 +157,10 @@
   let selected_team: Team = team[0];
 </script>
 
+<head>
+  <title> Dreamteam - Team </title>
+</head>
+
 <div class="w-full h-0 fixed inset-0 flex flex-col justify-between z-50">
   <div
     class="flex items-center justify-between bg-black bg-opacity-75 backdrop-blur-xl p-2.5 md:p-5"
