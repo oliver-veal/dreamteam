@@ -9,7 +9,7 @@
 </script>
 
 <section
-  class="w-full flex flex-col xl:flex-row items-center p-5 space-y-24 xl:space-y-0 transition-all"
+  class="w-full flex flex-col xl:flex-row items-center p-4 space-y-24 xl:space-y-0 transition-all"
   id="what-we-do"
 >
   <div
@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div class="relative h-[150px] w-[400px]">
+    <div class="relative h-[150px] max-w-[350px] w-full">
       {#if node === 'storytelling'}
         <div transition:fade class="absolute top-0 flex flex-col space-y-5">
           <h2 class="text-lg">Storytelling</h2>
@@ -87,9 +87,9 @@
           on:click={() => (node = 'storytelling')}
         >
           <div
-            class="group-hover:text-white absolute text-transparent xl:-translate-x-56 translate-x-32 xl:right-0 left-0 transition-all select-none pointer-events-none"
+            class="group-hover:text-white absolute text-transparent xl:-translate-x-80 translate-x-16 xl:right-0 left-0 transition-all select-none pointer-events-none"
           >
-            <h1 class="text-3xl">Storytelling</h1>
+            <h1 class="text-xl xl:text-3xl">Storytelling</h1>
           </div>
           <Icon src={Plus} width="24" />
         </button>
@@ -98,9 +98,9 @@
           on:click={() => (node = 'design')}
         >
           <div
-            class="group-hover:text-white absolute text-transparent xl:translate-x-32 -translate-x-32 xl:left-0 right-0 transition-all select-none pointer-events-none"
+            class="group-hover:text-white absolute text-transparent xl:translate-x-16 -translate-x-16 xl:left-0 right-0 transition-all select-none pointer-events-none"
           >
-            <h1 class="text-3xl">Design</h1>
+            <h1 class="text-xl xl:text-3xl">Design</h1>
           </div>
           <Icon src={Plus} width="24" />
         </button>
@@ -109,9 +109,9 @@
           on:click={() => (node = 'engineering')}
         >
           <div
-            class="group-hover:text-white absolute text-transparent xl:-translate-x-56 translate-x-32 xl:right-0 left-0 transition-all select-none pointer-events-none"
+            class="group-hover:text-white absolute text-transparent xl:-translate-x-80 translate-x-16 xl:right-0 left-0 transition-all select-none pointer-events-none"
           >
-            <h1 class="text-3xl">Engineering</h1>
+            <h1 class="text-xl xl:text-3xl">Engineering</h1>
           </div>
           <Icon src={Plus} width="24" />
         </button>
@@ -120,9 +120,9 @@
           on:click={() => (node = 'technology')}
         >
           <div
-            class="group-hover:text-white absolute text-transparent xl:translate-x-32 -translate-x-32 xl:left-0 right-0 transition-all select-none pointer-events-none"
+            class="group-hover:text-white absolute text-transparent xl:translate-x-16 -translate-x-16 xl:left-0 right-0 transition-all select-none pointer-events-none"
           >
-            <h1 class="text-3xl">Technology</h1>
+            <h1 class="text-xl xl:text-3xl">Technology</h1>
           </div>
           <Icon src={Plus} width="24" />
         </button>

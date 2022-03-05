@@ -3,7 +3,7 @@
     class="flex flex-col w-full h-full items-center justify-center z-30 space-y-12"
   >
     <h1
-      class="text-5xl uppercase font-light text-center flex flex-col px-32 select-none"
+      class="text-5xl uppercase font-light text-center flex flex-col xl:px-32 select-none"
     >
       We are dream team
     </h1>
