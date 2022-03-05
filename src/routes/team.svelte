@@ -208,7 +208,7 @@
       {#each team as member}
         {#if selected_team === member}
           <div
-            transition:fade={{ duration: 150 }}
+            transition:fade|local={{ duration: 150 }}
             class="absolute inset-0 flex xl:flex-row flex-col xl:divide-x divide-y xl:divide-y-0 py-16 items-center justify-center w-full h-full"
           >
             <div class="flex flex-col space-y-8 p-16 items-start">
