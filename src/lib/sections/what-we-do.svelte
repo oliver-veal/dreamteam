@@ -16,7 +16,7 @@
     class="w-full flex flex-col items-center justify-center text-center space-y-8"
   >
     <div class="flex flex-col space-y-4 items-center">
-      <h1 class="text-3xl xl:text-6xl uppercase font-light">What we do</h1>
+      <h1>What we do</h1>
 
       <div class="flex space-x-4">
         <Icon src={InformationCircle} solid width="20" />

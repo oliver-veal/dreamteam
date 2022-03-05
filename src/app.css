@@ -19,7 +19,7 @@ h1, p {
 }
 
 h1 {
-    @apply text-3xl xl:text-6xl uppercase font-light text-center px-8 xl:px-16
+    @apply text-3xl xl:text-5xl uppercase font-light text-center px-8 xl:px-16 tracking-tight
 }
 
 .btn {

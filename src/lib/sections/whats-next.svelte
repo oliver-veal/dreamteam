@@ -1,12 +1,8 @@
-<script lang="ts">
-  import Button from '$lib/button/Button.svelte';
-</script>
-
 <section
   class="w-full flex flex-col p-10 space-y-24 xl:space-y-48 pb-48"
   id="whats-next"
 >
-  <h1 class="w-full text-center text-3xl xl:text-6xl uppercase">What's Next</h1>
+  <h1>What's Next</h1>
 
   <div class="flex w-full h-full justify-center items-end">
     <div class="w-full flex justify-between items-start">

@@ -8,7 +8,7 @@
     damping: 0.1,
   });
 
-  let manifesto_open = false;
+  let manifesto_open = true;
 
   $: {
     if (manifesto_open) manifesto.set(100);
@@ -44,7 +44,7 @@
       <div
         class="gradient absolute top-0 left-0 w-full h-screen flex items-center justify-center z-30"
         style="clip-path: url(#manifesto_clip)"
-        in:fly={{ y: 150, duration: 1500, delay: 3000 }}
+        in:fly={{ y: 150, duration: 1500, delay: 0 }}
       />
 
       <div

@@ -8,8 +8,8 @@
   id="what-weve-made"
 >
   <div class="w-full text-center">
-    <h1 class="text-3xl xl:text-6xl uppercase font-light">What we've made</h1>
-    <p class="xl:text-2xl">A small glimpse at our work</p>
+    <h1>What we've made</h1>
+    <span class="xl:text-xl">A small glimpse at our work</span>
   </div>
 
   <div
