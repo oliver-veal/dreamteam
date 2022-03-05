@@ -4,7 +4,7 @@
   import Menu from '$lib/menu/Menu.svelte';
   import MenuIcon from '$lib/menu/MenuIcon.svelte';
   import { OnMount } from 'fractils';
-  import { fly } from 'svelte/transition';
+  import { fly, fade } from 'svelte/transition';
 
   let menuOpen = false;
 
@@ -204,26 +204,33 @@
 
 <div class="w-full flex flex-col">
   <div class="flex w-full flex-grow items-center justify-center">
-    <div
-      class="flex xl:flex-row flex-col w-full xl:max-w-[1000px] max-w-[600px] h-[600px] xl:divide-x divide-y xl:divide-y-0 py-16 items-center justify-center"
-    >
-      <div class="flex flex-col space-y-8 p-16 items-start">
-        <div class="flex flex-col">
-          <h2 class="text-3xl">{selected_team.name}</h2>
-          <p>{selected_team.role}</p>
-        </div>
-        <p class="text-xl text-justify">
-          {selected_team.blurb}
-        </p>
-      </div>
+    <div class="relative w-full xl:max-w-[1000px] max-w-[600px] h-[600px] ">
+      {#each team as member}
+        {#if selected_team === member}
+          <div
+            transition:fade={{ duration: 150 }}
+            class="absolute inset-0 flex xl:flex-row flex-col xl:divide-x divide-y xl:divide-y-0 py-16 items-center justify-center w-full h-full"
+          >
+            <div class="flex flex-col space-y-8 p-16 items-start">
+              <div class="flex flex-col">
+                <h2 class="text-3xl">{member.name}</h2>
+                <p>{member.role}</p>
+              </div>
+              <p class="text-xl text-justify">
+                {member.blurb}
+              </p>
+            </div>
 
-      <div
-        class="flex flex-col space-y-8 p-16 items-center justify-center flex-shrink-0"
-      >
-        {#each selected_team.skills as skill}
-          <h2>{skill}</h2>
-        {/each}
-      </div>
+            <div
+              class="flex flex-col space-y-8 p-16 items-center justify-center flex-shrink-0"
+            >
+              {#each member.skills as skill}
+                <h2>{skill}</h2>
+              {/each}
+            </div>
+          </div>
+        {/if}
+      {/each}
     </div>
   </div>
 
