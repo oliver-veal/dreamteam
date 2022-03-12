@@ -8,7 +8,7 @@
     damping: 0.1,
   });
 
-  let manifesto_open = true;
+  let manifesto_open = false;
 
   $: {
     if (manifesto_open) manifesto.set(100);
