@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { OnMount } from 'fractils';
-  import { fly, fade } from 'svelte/transition';
-  import { spring } from 'svelte/motion';
+  import { OnMount } from "fractils";
+  import { fly, fade } from "svelte/transition";
+  import { spring } from "svelte/motion";
 
   let manifesto = spring(0, {
     stiffness: 0.005,
@@ -23,7 +23,7 @@
   >
     <defs>
       <clipPath id="manifesto_clip">
-        <circle cx="50%" cy="75%" r={$manifesto + 5 + '%'} />
+        <circle cx="50%" cy="75%" r={$manifesto + 5 + "%"} />
       </clipPath>
     </defs>
   </svg>
@@ -34,7 +34,7 @@
   >
     <defs>
       <clipPath id="manifesto_button_clip">
-        <circle cx="50%" cy="75%" r={(100 - $manifesto) / 21 + '%'} />
+        <circle cx="50%" cy="75%" r={(100 - $manifesto) / 21 + "%"} />
       </clipPath>
     </defs>
   </svg>
@@ -44,7 +44,7 @@
       <div
         class="gradient absolute top-0 left-0 w-full h-screen flex items-center justify-center z-30"
         style="clip-path: url(#manifesto_clip)"
-        in:fly={{ y: 150, duration: 1500, delay: 0 }}
+        in:fly={{ y: 150, duration: 1500, delay: 3000 }}
       />
 
       <div
