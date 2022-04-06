@@ -1,10 +1,10 @@
 <script lang="ts">
-  import ChevronDown from '$lib/icon/heroicons/ChevronDown.js';
-  import Icon from '$lib/icon/Icon.svelte';
-  import Menu from '$lib/menu/Menu.svelte';
-  import MenuIcon from '$lib/menu/MenuIcon.svelte';
-  import { OnMount } from 'fractils';
-  import { fly, fade } from 'svelte/transition';
+  import ChevronDown from "$lib/icon/heroicons/ChevronDown.js";
+  import Icon from "$lib/icon/Icon.svelte";
+  import Menu from "$lib/menu/Menu.svelte";
+  import MenuIcon from "$lib/menu/MenuIcon.svelte";
+  import { OnMount } from "fractils";
+  import { fly, fade } from "svelte/transition";
 
   let menuOpen = false;
 
@@ -22,11 +22,11 @@
       y: e.clientY,
     };
 
-    side_scroll.style.cursor = 'grabbing';
-    side_scroll.style.userSelect = 'none';
+    side_scroll.style.cursor = "grabbing";
+    side_scroll.style.userSelect = "none";
 
-    document.addEventListener('mousemove', mouseMoveHandler);
-    document.addEventListener('mouseup', mouseUpHandler);
+    document.addEventListener("mousemove", mouseMoveHandler);
+    document.addEventListener("mouseup", mouseUpHandler);
   };
 
   const mouseMoveHandler = (e: MouseEvent) => {
@@ -35,11 +35,11 @@
   };
 
   const mouseUpHandler = (e: MouseEvent) => {
-    document.removeEventListener('mousemove', mouseMoveHandler);
-    document.removeEventListener('mouseup', mouseUpHandler);
+    document.removeEventListener("mousemove", mouseMoveHandler);
+    document.removeEventListener("mouseup", mouseUpHandler);
 
-    side_scroll.style.cursor = 'grab';
-    side_scroll.style.removeProperty('user-select');
+    side_scroll.style.cursor = "grab";
+    side_scroll.style.removeProperty("user-select");
   };
 
   interface Team {
@@ -57,99 +57,108 @@
 
   const team = [
     {
-      img: 'freya_smith',
-      name: 'Freya Smith',
-      role: 'Design Engineer',
+      img: "nick_munro",
+      name: "Nick Munro",
+      role: "Cheif Dreamer",
       blurb:
-        'Freya is interested in the fusion of art and creativity with engineering, generating inventive design solutions.',
-      skills: ['Product Design', 'User Experience Design', 'Engineering'],
+        "Nick is a multi award winning designer, innovator, entrepreneur who matches opportunity with talent and resource.",
+      skills: ["Strategy", "Details", "Commitment"],
       offset: getRandomOffset(),
     },
     {
-      img: 'harika',
-      name: 'Harika Adivikolanu',
-      role: 'Experience Designer and Strategist',
+      img: "freya_smith",
+      name: "Freya Smith",
+      role: "Design Engineer",
       blurb:
-        'Harika is an experience designer and strategist focused breaking down barriers between humans and emerging technologies. Harika uses a non-intrusive design approach in physical and digital design solutions to enhance wellbeing.',
+        "Freya is interested in the fusion of art and creativity with engineering, generating inventive design solutions.",
+      skills: ["Product Design", "User Experience Design", "Engineering"],
+      offset: getRandomOffset(),
+    },
+    {
+      img: "harika",
+      name: "Harika Adivikolanu",
+      role: "Experience Designer and Strategist",
+      blurb:
+        "Harika is an experience designer and strategist focused breaking down barriers between humans and emerging technologies. Harika uses a non-intrusive design approach in physical and digital design solutions to enhance wellbeing.",
       skills: [
-        'UI/UX and Experience Design',
-        'Innovation Strategy',
-        'Human-Centered Research',
+        "UI/UX and Experience Design",
+        "Innovation Strategy",
+        "Human-Centered Research",
       ],
       offset: getRandomOffset(),
     },
     {
-      img: 'idan',
-      name: 'Idan Gal Shohet',
-      role: 'Branding and Communications',
+      img: "idan",
+      name: "Idan Gal Shohet",
+      role: "Branding and Communications",
       blurb:
-        'Idan combines design, engineering and marketing approaches, ensuring solutions have a powerful identity that reaches, and impacts, the intended audience.',
-      skills: ['Brand Development', 'Communications', 'Graphic design'],
+        "Idan combines design, engineering and marketing approaches, ensuring solutions have a powerful identity that reaches, and impacts, the intended audience.",
+      skills: ["Brand Development", "Communications", "Graphic design"],
       offset: getRandomOffset(),
     },
     {
-      img: 'jessica_riley',
-      name: 'Jessica Riley',
-      role: 'Interdisciplinary Designer and Researcher & Creative Lead',
+      img: "jessica_riley",
+      name: "Jessica Riley",
+      role: "Interdisciplinary Designer and Researcher & Creative Lead",
       blurb:
-        'A human-centred designer, researcher and communicator, Jessica tackles complex challenges through a holistic and collaborative approach; effecting meaningful impact through design.',
-      skills: ['User-Centred Design', 'Creative Strategy', 'Content Design'],
+        "A human-centred designer, researcher and communicator, Jessica tackles complex challenges through a holistic and collaborative approach; effecting meaningful impact through design.",
+      skills: ["User-Centred Design", "Creative Strategy", "Content Design"],
       offset: getRandomOffset(),
     },
     {
-      img: 'julian',
-      name: 'Julian Ellis-Brown',
-      role: 'Systems Thinker and Design Engineer',
+      img: "julian",
+      name: "Julian Ellis-Brown",
+      role: "Systems Thinker and Design Engineer",
       blurb:
-        'With a background in Mechanical Engineering and a double-masters in Innovation Design Engineering, Julian brings together a macro understanding of design which is underscored by a fundamental knowledge of first principles. Having spent time designing innovative new mechanical devices for DreamTeam, Julian is now turning his attention to sustainability through co-founding saltyco®, a materials science start-up focussing on turning the fashion industry planet-positive.',
+        "With a background in Mechanical Engineering and a double-masters in Innovation Design Engineering, Julian brings together a macro understanding of design which is underscored by a fundamental knowledge of first principles. Having spent time designing innovative new mechanical devices for DreamTeam, Julian is now turning his attention to sustainability through co-founding saltyco®, a materials science start-up focussing on turning the fashion industry planet-positive.",
       skills: [
-        'Systems Design',
-        'Bio-Based Materials',
-        'Planet-Centred Design',
+        "Systems Design",
+        "Bio-Based Materials",
+        "Planet-Centred Design",
       ],
       offset: getRandomOffset(),
     },
     {
-      img: 'leo_planck',
-      name: 'Leo Planck-Prideaux',
-      role: 'Hardware Engineer',
+      img: "leo_planck",
+      name: "Leo Planck-Prideaux",
+      role: "Hardware Engineer",
       blurb:
-        'Leo thrives at the intersection of technology and design. His passion is creating products that achieve their technical potential through elegant design.',
+        "Leo thrives at the intersection of technology and design. His passion is creating products that achieve their technical potential through elegant design.",
       skills: [
-        '3D Modelling',
-        'Integrated Circuit Design',
-        'Visualisation and Rendering',
+        "3D Modelling",
+        "Integrated Circuit Design",
+        "Visualisation and Rendering",
       ],
       offset: getRandomOffset(),
     },
     {
-      img: 'marco',
-      name: '',
-      role: '',
-      blurb: '',
-      skills: ['', '', ''],
+      img: "marco",
+      name: "",
+      role: "",
+      blurb: "",
+      skills: ["", "", ""],
       offset: getRandomOffset(),
     },
     {
-      img: 'martin_lombard',
-      name: 'Martin Lombard',
-      role: 'Design Engineer',
+      img: "martin_lombard",
+      name: "Martin Lombard",
+      role: "Design Engineer",
       blurb:
-        'Martin is a passionate creator with an innovative and disruptive approach to problem-solving. He applies rigorous engineering and design concepts to create aesthetic, attractive and precise systems.',
+        "Martin is a passionate creator with an innovative and disruptive approach to problem-solving. He applies rigorous engineering and design concepts to create aesthetic, attractive and precise systems.",
       skills: [
-        'Product Design',
-        'Created Content Creation',
-        'Technical Development',
+        "Product Design",
+        "Created Content Creation",
+        "Technical Development",
       ],
       offset: getRandomOffset(),
     },
     {
-      img: 'oscar_leclercq',
-      name: 'Oscar Leclercq',
-      role: 'Design Engineer and Web Designer',
+      img: "oscar_leclercq",
+      name: "Oscar Leclercq",
+      role: "Design Engineer and Web Designer",
       blurb:
         "Oscar focuses on user-centred design and engineering, pushing this approach within the scope of sustainable innovation. Oscar has developed online platforms for Dreamteam including websites and online shops, as well as communicating Dreamteam's work to clients and the public.",
-      skills: ['Communications', 'Web Design', 'Human-Centered Design'],
+      skills: ["Communications", "Web Design", "Human-Centered Design"],
       offset: getRandomOffset(),
     },
   ];
@@ -260,7 +269,7 @@
           <div
             style:background="linear-gradient(180deg,#FF827C,#FF53F6)"
             style:height={selected_team === member
-              ? '600px'
+              ? "600px"
               : `${member.offset}px`}
             class="{selected_team === member ||
               'xl:hover:translate-y-0 hover:translate-y-32'} xl:translate-y-16 translate-y-48 transition-all rounded-t-full p-1 xl:mx-8 mx-4"
