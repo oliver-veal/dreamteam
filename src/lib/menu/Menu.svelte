@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { slide } from 'svelte/transition';
+  import { slide } from "svelte/transition";
 
   export let closeMenu: () => any;
   export let open: boolean;
@@ -7,7 +7,7 @@
 
 <svelte:window
   on:keydown={(e) => {
-    if (e.key === 'Escape') closeMenu();
+    if (e.key === "Escape") closeMenu();
   }}
 />
 
@@ -18,10 +18,6 @@
   >
     <a href="/" on:click={closeMenu} sveltekit:prefetch class="p-5">
       <h1 class="text-3xl uppercase font-light select-none">Home</h1>
-    </a>
-
-    <a href="/projects" on:click={closeMenu} sveltekit:prefetch class="p-5">
-      <h1 class="text-3xl uppercase font-light select-none">Projects</h1>
     </a>
 
     <a href="/team" on:click={closeMenu} sveltekit:prefetch class="p-5">

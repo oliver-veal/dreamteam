@@ -1,10 +1,16 @@
 <script lang="ts">
-  import { draw } from 'svelte/transition';
+  import { draw } from "svelte/transition";
 
   export let open = false;
+  export let color = "#fff";
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" {...$$restProps}>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill={color}
+  {...$$restProps}
+>
   {#if open}
     <path
       transition:draw={{ duration: 300 }}
@@ -12,7 +18,7 @@
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="5"
-      stroke="#fff"
+      stroke={color}
     />
     <path
       transition:draw={{ duration: 300 }}
@@ -20,7 +26,7 @@
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="5"
-      stroke="#fff"
+      stroke={color}
     />
   {/if}
 

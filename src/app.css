@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -11,21 +11,48 @@
 
 :root {
   font-family: Mattone;
-  font-size: 14px
+  font-size: 14px;
 }
 
-h1, p {
+h1,
+p {
   font-family: Montserrat, Helvetica, sans-serif;
 }
 
 h1 {
-    @apply text-3xl xl:text-5xl uppercase font-light text-center px-8 xl:px-16 tracking-tight
+  @apply text-3xl xl:text-5xl uppercase font-light text-center px-8 xl:px-16 tracking-tight;
 }
 
 .btn {
-    @apply py-2 xl:px-8 px-2 ring-2 ring-white rounded-full hover:ring-4 focus:ring-4 transition-all focus:outline-none
+  @apply py-2 xl:px-8 px-2 ring-2 ring-white rounded-full hover:ring-4 focus:ring-4 transition-all focus:outline-none;
 }
 
 .gradient {
-    background: linear-gradient(-20deg, rgb(5,255,241) 25%, rgb(255,84,112) 75%);
+  /*background: linear-gradient(*/
+  /*-20deg,*/
+  /*rgb(5, 255, 241) 25%,*/
+  /*rgb(255, 84, 112) 75%*/
+  /*);*/
+  background: rgb(238, 156, 82);
+  background: linear-gradient(
+    131deg,
+    rgba(238, 156, 82, 1) 0%,
+    rgba(255, 84, 112, 1) 33%,
+    rgba(184, 116, 205, 1) 66%,
+    rgba(5, 255, 241, 1) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
