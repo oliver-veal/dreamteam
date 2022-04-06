@@ -40,8 +40,6 @@
   </div>
 </div>
 
-<ProjectPanel bind:panelContent bind:panelOpen />
-
 <main class="space-y-48 xl:space-y-96">
   <Manifesto />
 
@@ -56,5 +54,7 @@
   <WhatsNext />
 </main>
 
+<ProjectPanel bind:panelContent bind:panelOpen />
 <Menu open={panelOpen && panelContent === "menu"} {closeMenu} />
+
 <Footer />
